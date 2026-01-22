@@ -11,7 +11,7 @@
 <body class="bg-white w-full min-h-screen font-sans">
     @include('partials.navbar')
 
-    <main class="w-full min-h-screen">
+    <main class="w-full min-h-screen pt-12 max-md:pt-8">
         @yield('content')
     </main>
 

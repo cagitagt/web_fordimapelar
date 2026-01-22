@@ -1,7 +1,7 @@
 @extends('layout.user')
 
 @section('content')
-    <div class="min-h-96 w-full bg-white relative overflow-hidden">
+    <div class="min-h-110 w-full bg-white relative overflow-hidden">
         <!-- Dual Gradient Overlay (Top Background) -->
         <diV class="absolute inset-0 z-0  "
             style="

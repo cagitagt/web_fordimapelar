@@ -9,7 +9,7 @@
         </div>
 
         <!-- Page Content -->
-        <div class="absolute z-10 mt-30">
+        <div class="absolute z-10">
             <div class="mx-auto max-w-5xl py-40 text-[#09182C] flex flex-col justify-center items-center">
                 <h1 class=" text-5xl font-bold max-md:text-4xl">Fordi Mapelar</h1>
                 <p class="leading-relaxed text-center my-1 text-stone-700 font-semibold max-md:text-sm">
@@ -74,17 +74,8 @@
 
     </section>
 
-    {{-- manifesto penalaran --}}
-    <section class="px-40 py-48  max-lg:px-16 max-lg:py-30 grid max-lg:grid-cols-1 grid-cols-2 text-stone-700 gap-7">
-        <div class="font-decorative text-5xl lg:text-8xl">Manifesto Penalaran</div>
-        <p class=" max-lg:text-sm font-medium border-l-2 pl-5  border-stone-700">
-            Bahwa sesungguhnya Fordi Mapelar Universitas Brawijaya dalam segala gerak dan langkahnya selalu dijiwai oleh
-            semangat penalaran yang mengarah pada pengejawantahan idealisme kemahasiswaan dalam memenuhi tanggung jawab
-            sosialnya. Dan daripada itu, semangat penalaran adalah suatu jiwa yang terpancar dari kejernihan hati nurani
-            yang paling dalam, dengan dasar pemikiran yang benar serta diwujudkan dalam keteguhan sikap dan keberanian
-            menyuarakan kebenaran.
-        </p>
-    </section>
+    {{-- Arti Logo Fordi --}}
+    <section></section>
 
     {{-- Tentang Fordi Mapelar --}}
     <section class="px-40 py-48 max-lg:px-12 max-lg:py-30  text-stone-700 gap-7">
@@ -114,27 +105,125 @@
         </div>
     </section>
 
+
+
     {{-- Nilai dasar organisasi --}}
-    <section class=" px-40 py-48 max-lg:px-12 max-lg:py-30 bg-amber-50">
+    <section class=" px-20 py-24 max-lg:px-12 max-lg:py-30 bg-[#106AD2]">
+        <h1 class="text-5xl font-bold max-md:text-3xl mb-20 text-white text-center">
+            Nilai Dasar Organisasi
+        </h1>
 
-        <div class="flex flex-col md:flex-2 lg:flex-3 items-center justify-center gap-10">
-            <div class="w-64 h-64 perspective-[1000px]">
+        <div class="flex max-md:flex-col items-center justify-center flex-wrap gap-10">
+            <div class="w-46 h-46 perspective-[1000px] ">
                 <div
-                    class="relative w-full h-full transition-transform duration-700 transform-3d hover:transform-[rotateY(180deg)] text-white">
+                    class="relative w-full h-full transition-transform duration-700 transform-3d hover:transform-[rotateY(180deg)]  shadow-2xl  rounded-xl bg-white text-stone-700 font-semibold ">
 
-                    <!-- FRONT -->
+                    {{-- front --}}
                     <div
-                        class="absolute inset-0 flex items-center justify-center rounded-xl bg-yellow-400 
-                backface-hidden font-semibold text-3xl">
+                        class="absolute inset-0 flex items-center justify-center rounded-xl  
+                backface-hidden  text-lg">
                         Collaboration
                     </div>
 
-                    <!-- BACK -->
+                    {{-- back --}}
                     <div
-                        class="absolute inset-0 flex items-center justify-center rounded-xl  bg-[#106AD2]
-                transform-[rotateY(180deg)] backface-hidden p-5 text-center">
-                        Mendorong adanya kerja sama dan kolaborasi baik antar anggota maupun Fordi Mapelar dengan organisasi
-                        lain
+                        class="absolute inset-0 flex flex-col items-center justify-center rounded-xl  
+                transform-[rotateY(180deg)] backface-hidden p-5   ">
+                        <h1 class="font-extrabold text-xl mb-2 text-[#106AD2]">Collaboration</h1>
+                        <p class=" leading-none text-sm text-justify">Mendorong adanya kerja sama dan kolaborasi baik antar anggota maupun Fordi Mapelar dengan organisasi lain</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="w-46 h-46 perspective-[1000px] ">
+                <div
+                    class="relative w-full h-full transition-transform duration-700 transform-3d hover:transform-[rotateY(180deg)]  shadow-2xl  rounded-xl bg-white text-stone-700 font-semibold ">
+
+                    {{-- front --}}
+                    <div
+                        class="absolute inset-0 flex items-center justify-center rounded-xl  
+                backface-hidden  text-lg">
+                        Communication
+                    </div>
+
+                    {{-- back --}}
+                    <div
+                        class="absolute inset-0 flex flex-col items-center justify-center rounded-xl  
+                transform-[rotateY(180deg)] backface-hidden p-5   ">
+                        <h1 class="font-extrabold text-xl mb-2 text-[#106AD2]">Communication</h1>
+                        <p class=" leading-none text-sm text-justify">Membangun dan mengembangkan pola komunikasi yang terbuka dan efektif dalam merangkul berbagai aspirasi dan dalam menjalankan roda organisasi.</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="w-46 h-46 perspective-[1000px] ">
+                <div
+                    class="relative w-full h-full transition-transform duration-700 transform-3d hover:transform-[rotateY(180deg)]  shadow-2xl  rounded-xl bg-white text-stone-700 font-semibold ">
+
+                    {{-- front --}}
+                    <div
+                        class="absolute inset-0 flex items-center justify-center rounded-xl  
+                backface-hidden  text-lg">
+                        Creativity
+                    </div>
+
+                    {{-- back --}}
+                    <div
+                        class="absolute inset-0 flex flex-col items-center justify-center rounded-xl  
+                transform-[rotateY(180deg)] backface-hidden p-5   ">
+                        <h1 class="font-extrabold text-xl mb-2 text-[#106AD2]">Creativity</h1>
+                        <p class=" leading-none text-sm text-justify">Mendorong inovasi dan kreativitas dalam progresifitas pengembangan anggota.</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="w-46 h-46 perspective-[1000px] ">
+                <div
+                    class="relative w-full h-full transition-transform duration-700 transform-3d hover:transform-[rotateY(180deg)]  shadow-2xl  rounded-xl bg-white text-stone-700 font-semibold ">
+
+                    {{-- front --}}
+                    <div
+                        class="absolute inset-0 flex items-center justify-center rounded-xl  
+                backface-hidden  text-lg">
+                        Cultivation
+                    </div>
+
+                    {{-- back --}}
+                    <div
+                        class="absolute inset-0 flex flex-col items-center justify-center rounded-xl  
+                transform-[rotateY(180deg)] backface-hidden p-5   ">
+                        <h1 class="font-extrabold text-xl mb-2 text-[#106AD2]">Cultivation</h1>
+                        <p class=" leading-none text-sm text-justify">Memberdayakan anggota melalui pembinaan dan pengembangan pribadi</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="w-46 h-46 perspective-[1000px] ">
+                <div
+                    class="relative w-full h-full transition-transform duration-700 transform-3d hover:transform-[rotateY(180deg)]  shadow-2xl  rounded-xl bg-white text-stone-700 font-semibold ">
+
+                    {{-- front --}}
+                    <div
+                        class="absolute inset-0 flex items-center justify-center rounded-xl  
+                backface-hidden  text-lg">
+                        Caring
+                    </div>
+
+                    {{-- back --}}
+                    <div
+                        class="absolute inset-0 flex flex-col items-center justify-center rounded-xl  
+                transform-[rotateY(180deg)] backface-hidden p-5   ">
+                        <h1 class="font-extrabold text-xl mb-2 text-[#106AD2]">Caring</h1>
+                        <p class=" leading-none text-sm text-justify">Membangun budaya perhatian dan dukungan di antara anggota.</p>
+
                     </div>
 
                 </div>
@@ -144,5 +233,16 @@
 
     </section>
 
-    {{-- Arti Logo Fordi --}}
+
+    {{-- manifesto penalaran --}}
+    <section class="px-40 py-48  max-lg:px-16 max-lg:py-30 grid max-lg:grid-cols-1 grid-cols-2 text-stone-700 gap-7">
+        <div class="font-decorative text-5xl lg:text-8xl">Manifesto Penalaran</div>
+        <p class=" max-lg:text-sm font-medium border-l-2 pl-5  border-stone-700">
+            Bahwa sesungguhnya Fordi Mapelar Universitas Brawijaya dalam segala gerak dan langkahnya selalu dijiwai oleh
+            semangat penalaran yang mengarah pada pengejawantahan idealisme kemahasiswaan dalam memenuhi tanggung jawab
+            sosialnya. Dan daripada itu, semangat penalaran adalah suatu jiwa yang terpancar dari kejernihan hati nurani
+            yang paling dalam, dengan dasar pemikiran yang benar serta diwujudkan dalam keteguhan sikap dan keberanian
+            menyuarakan kebenaran.
+        </p>
+    </section>
 @endsection

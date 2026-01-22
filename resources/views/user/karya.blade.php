@@ -2,20 +2,22 @@
 
 @section('content')
     <div class="h-full w-full relative">
-        <div class="min-h-96 w-full bg-white relative overflow-hidden flex justify-center items-center">
-            <div class="absolute inset-0 z-0" 
+        <div class="min-h-110 w-full bg-white relative overflow-hidden flex justify-center items-center">
+            <diV class="absolute inset-0 z-0  "
             style="
-                background-image:
-                    linear-gradient(to right, #f0f0f0 1px, transparent 1px),
-                    linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
-                    radial-gradient(circle 600px at 0% 200px, #fff8c5, transparent),
-                    radial-gradient(circle 600px at 100% 200px, #fff8c5, transparent);
-                background-size:
-                    96px 64px,
-                    96px 64px,
-                    100% 100%,
-                    100% 100%;
-            ">
+            background-image:
+                linear-gradient(to right, rgba(229,231,235,0.8) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(229,231,235,0.8) 1px, transparent 1px),
+                radial-gradient(circle 500px at 0% 20%, rgba(139,92,246,0.3), transparent),
+                radial-gradient(circle 500px at 100% 0%, rgba(224, 246, 59, 0.3), transparent);
+            background-size:
+                48px 48px,
+                48px 48px,
+                100% 100%,
+                100% 100%;
+            mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+        ">
             </div>
 
             <!-- Title -->
