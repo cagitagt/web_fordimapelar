@@ -24,7 +24,7 @@
                         E-Booklet
                     </button>
                     <button
-                        class=" px-6 py-2 bg-white border-stone-700 rounded-full font-bold cursor-pointer  border-2">Program Kerja</button>
+                        class=" px-6 py-2 bg-white border-stone-700 rounded-full font-bold cursor-pointer  border-2"><a href="{{ route('program-kerja') }}">Program Kerja</a></button>
                 </div>
         </div>
     </section>

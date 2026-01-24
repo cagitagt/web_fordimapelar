@@ -19,10 +19,16 @@
                     Universitas Brawijaya
                 </h1>
                 <div class="flex gap-3">
-                    <button class="mt-10 px-6 py-2 bg-[#09182C] text-white rounded-full font-bold cursor-pointer">Tentang
-                        Kami</button>
+                    <button class="mt-10 px-6 py-2 bg-[#09182C] text-white rounded-full font-bold cursor-pointer">
+                        <a href="{{ route('tentang') }}">Tentang Kami
+                        </a>
+                    </button>
                     <button
-                        class="mt-10 px-6 py-2 bg-white border-stone-700 rounded-full font-bold cursor-pointer text-stone-700 border-2">Layanan</button>
+                        class="mt-10 px-6 py-2 bg-white border-stone-700 rounded-full font-bold cursor-pointer text-stone-700 border-2">
+                        <a href="{{ route('layanan') }}">Layanan
+                        </a>
+                    </button>
+
                 </div>
             </div>
         </div>
@@ -74,9 +80,6 @@
 
     </section>
 
-    {{-- Arti Logo Fordi --}}
-    <section></section>
-
     {{-- Tentang Fordi Mapelar --}}
     <section class="px-40 py-48 max-lg:px-12 max-lg:py-30  text-stone-700 gap-7">
         <div class="font-decorative text-end text-6xl lg:text-8xl mb-10">Tentang Fordi Mapelar</div>
@@ -105,8 +108,6 @@
         </div>
     </section>
 
-
-
     {{-- Nilai dasar organisasi --}}
     <section class=" px-20 py-24 max-lg:px-12 max-lg:py-30 bg-[#106AD2]">
         <h1 class="text-5xl font-bold max-md:text-3xl mb-20 text-white text-center">
@@ -130,7 +131,8 @@
                         class="absolute inset-0 flex flex-col items-center justify-center rounded-xl  
                 transform-[rotateY(180deg)] backface-hidden p-5   ">
                         <h1 class="font-extrabold text-xl mb-2 text-[#106AD2]">Collaboration</h1>
-                        <p class=" leading-none text-sm text-justify">Mendorong adanya kerja sama dan kolaborasi baik antar anggota maupun Fordi Mapelar dengan organisasi lain</p>
+                        <p class=" leading-none text-sm text-justify">Mendorong adanya kerja sama dan kolaborasi baik antar
+                            anggota maupun Fordi Mapelar dengan organisasi lain</p>
 
                     </div>
 
@@ -153,7 +155,8 @@
                         class="absolute inset-0 flex flex-col items-center justify-center rounded-xl  
                 transform-[rotateY(180deg)] backface-hidden p-5   ">
                         <h1 class="font-extrabold text-xl mb-2 text-[#106AD2]">Communication</h1>
-                        <p class=" leading-none text-sm text-justify">Membangun dan mengembangkan pola komunikasi yang terbuka dan efektif dalam merangkul berbagai aspirasi dan dalam menjalankan roda organisasi.</p>
+                        <p class=" leading-none text-sm text-justify">Membangun dan mengembangkan pola komunikasi yang
+                            terbuka dan efektif dalam merangkul berbagai aspirasi dan dalam menjalankan roda organisasi.</p>
 
                     </div>
 
@@ -176,7 +179,8 @@
                         class="absolute inset-0 flex flex-col items-center justify-center rounded-xl  
                 transform-[rotateY(180deg)] backface-hidden p-5   ">
                         <h1 class="font-extrabold text-xl mb-2 text-[#106AD2]">Creativity</h1>
-                        <p class=" leading-none text-sm text-justify">Mendorong inovasi dan kreativitas dalam progresifitas pengembangan anggota.</p>
+                        <p class=" leading-none text-sm text-justify">Mendorong inovasi dan kreativitas dalam progresifitas
+                            pengembangan anggota.</p>
 
                     </div>
 
@@ -199,7 +203,8 @@
                         class="absolute inset-0 flex flex-col items-center justify-center rounded-xl  
                 transform-[rotateY(180deg)] backface-hidden p-5   ">
                         <h1 class="font-extrabold text-xl mb-2 text-[#106AD2]">Cultivation</h1>
-                        <p class=" leading-none text-sm text-justify">Memberdayakan anggota melalui pembinaan dan pengembangan pribadi</p>
+                        <p class=" leading-none text-sm text-justify">Memberdayakan anggota melalui pembinaan dan
+                            pengembangan pribadi</p>
 
                     </div>
 
@@ -222,17 +227,165 @@
                         class="absolute inset-0 flex flex-col items-center justify-center rounded-xl  
                 transform-[rotateY(180deg)] backface-hidden p-5   ">
                         <h1 class="font-extrabold text-xl mb-2 text-[#106AD2]">Caring</h1>
-                        <p class=" leading-none text-sm text-justify">Membangun budaya perhatian dan dukungan di antara anggota.</p>
+                        <p class=" leading-none text-sm text-justify">Membangun budaya perhatian dan dukungan di antara
+                            anggota.</p>
 
                     </div>
 
                 </div>
             </div>
         </div>
+    </section>
 
+    {{-- Arti Logo Fordi --}}
+    <section class=" px-6 py-48 lg:px-20 lg:py-24 text-stone-700">
+
+        <div class="relative w-full overflow-hidden grid grid-cols-1 lg:grid-cols-2">
+            {{-- Kiri - Logo --}}
+            <div class="flex items-center justify-center p-5 min-h-48 ">
+                <img src="/images/fordi.png" class="h-96 w-auto max-w-full object-contain" alt="Fordi Mapelar Logo" />
+            </div>
+
+            {{-- Kanan - Slider --}}
+            <div class="relative overflow-hidden  min-h-48 ">
+                <div id="slider" class="relative h-full">
+                    <div class="slides-wrapper flex h-full transition-transform duration-500 ease-out">
+
+                        {{-- Slide 1 --}}
+                        <div
+                            class="slide w-full shrink-0 flex flex-col justify-center text-center px-10 py-12 md:p-20 font-medium">
+                            <h3 class="text-2xl md:text-xl">
+                                Lambang Fordi Mapelar adalah
+                                <i class="text-amber-700">Lingkar Insan Penalaran</i>
+                            </h3>
+                            <p class="mt-6 text-sm text-gray-300">
+                                Geser untuk melihat detail
+                            </p>
+                        </div>
+
+                        {{-- Slide 2 --}}
+                        <div
+                            class="slide w-full shrink-0 flex flex-col items-start justify-center px-8 py-12 md:px-12 space-y-4">
+                            <i class="font-extrabold text-lg  mb-5 w-full text-center">
+                                Filosofi <span class="text-amber-700 text-2xl">Warna</span>
+                            </i>
+
+                            <div class="flex items-start gap-4 w-full">
+                                <span class="w-6 h-6 rounded-full border border-stone-700 shrink-0 mt-1"></span>
+                                <p class="text-justify  leading-relaxed">
+                                    Melambangkan sikap <span class="font-bold">FORDI MAPELAR</span> yang obyektif dan tidak
+                                    berpihak
+                                </p>
+                            </div>
+
+                            <div class="flex items-start gap-4 w-full">
+                                <div class="w-6 h-6 rounded-full bg-[#ECE80B] shrink-0 mt-1"></div>
+                                <p class="text-justify  leading-relaxed">
+                                    Melambangkan sikap ilmu pengetahuan sebagai dasar penalaran <span
+                                        class="font-bold">FORDI MAPELAR</span>
+                                </p>
+                            </div>
+
+                            <div class="flex items-start gap-4 w-full">
+                                <div class="w-6 h-6 rounded-full bg-[#0595DD] shrink-0 mt-1"></div>
+                                <p class="text-justify  leading-relaxed">
+                                    Melambangkan sikap jujur serta selalu berpijak pada realita dan kebenaran
+                                </p>
+                            </div>
+
+                            <div class="flex items-start gap-4 w-full">
+                                <div class="w-6 h-6 rounded-full bg-[#2D1C73] shrink-0 mt-1"></div>
+                                <p class="text-justify  leading-relaxed">
+                                    Melambangkan bahwa anggota <span class="font-bold">FORDI MAPELAR</span> generasi muda
+                                    yang mempunyai idealisme
+                                </p>
+                            </div>
+                        </div>
+
+                        {{-- Slide 3 --}}
+                        <div class="slide w-full shrink-0 flex flex-col justify-center px-10 py-12 ">
+                            <i class="font-extrabold text-lg  mb-5 w-full text-center">
+                                Filosofi <span class="text-amber-700 text-2xl">Bentuk</span>
+                            </i>
+                            <ul class="mt-3 text-sm text-justify gap-3 flex flex-col ">
+                                <li><span class="font-bold">Lingkaran terbuka dengan mata panah - </span>Melambangkan sikap
+                                    <span class="font-bold">FORDI MAPELAR</span> yang selalu terbuka dan tanggap terhadap
+                                    setiap permasalahan yang kemudian
+                                    disaring dan dianalisa sesuai dengan kapasitas pikir manusia
+                                </li>
+                                <li><span class="font-bold">Lingkaran berlapis 3 dengan warna kuning diapit dengan warna
+                                        biru tua - </span>Melambangkan <span class="font-bold">FORDI MAPELAR</span> dalam
+                                    menganalisa suatu masalah selalu berpijak pada
+                                    realita dan ilmu pengetahuan serta dijiwai oleh idealisme, kebenaran, dan kejujuran</li>
+                                <li><span class="font-bold">Kepala manusia dengan otak terbuka - </span>Melambangkan
+                                    pikiran
+                                    sebagai ujung tombak penalaran dan selalu terbuka untuk menerima masukan baru</li>
+                                <li><span class="font-bold">Kepala menghadap ke kanan dengan mulut terbuka -
+                                    </span>Melambangkan
+                                    <span class="font-bold">FORDI MAPELAR</span> selalu berlandaskan pada kejujuran dan
+                                    berani mengungkapkan kebenaran
+                                </li>
+                            </ul>
+                        </div>
+
+                        {{-- Slide 4 --}}
+                        <div class="slide w-full shrink-0 flex flex-col justify-center text-center px-10 py-12">
+                            <i class="font-extrabold text-amber-700 text-2xl mb-5 w-full text-center">
+                                “ Nalar Hasta Terusing Budi ”
+                            </i>
+                            <p class="mt-3 text-sm text-justify">
+                                Semboyan <span class="font-bold">FORDI MAPELAR</span> adalah “Nalar Hasta Terusing
+                                Budi” yang menggambarkan alam pikiran dan hakekat kegiatan <span class="font-bold">FORDI
+                                    MAPELAR</span> sebagai kelompok studi yang didukung oleh kreativitas individu, pada
+                                hakekatnya mempunyai kegiatan intelektual yang menganalisa kebenaran tetapi juga terpanggil
+                                untuk menunaikan kewajiban sosialnya. “Nalar Hasta Terusing Budi” juga berarti bahwa bagi
+                                <span class="font-bold">FORDI MAPELAR</span> Universitas Brawijaya, bernalar, berkarya,
+                                menganalisa pikiran adalah kelanjutan dari budi yang arif untuk memebentuk manusia seutuhnya
+                                sesuai dengan hakekat manusia. “Nalar Hasta Terusing Budi” menurut rumusan candra sengkala
+                                adalah ‘nalar’ berwatak 1, ‘hasta’ berwatak 8, ‘terusing’ berwatak 9, dan ‘budi’ berwatak 1.
+                                Sebagaimana lazimnya sengkala dibaca terbalik, 1981 tahun berdirinya <span
+                                    class="font-bold">FORDI MAPELAR</span> Universitas Brawijaya.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                {{-- Dot Pagination mt-2 --}}
+                <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-10">
+                    <button class="dot h-2.5 w-2.5 rounded-full bg-[#106AD2]"></button>
+                    <button class="dot h-2.5 w-2.5 rounded-full bg-gray-300"></button>
+                    <button class="dot h-2.5 w-2.5 rounded-full bg-gray-300"></button>
+                    <button class="dot h-2.5 w-2.5 rounded-full bg-gray-300"></button>
+                </div>
+            </div>
+        </div>
 
     </section>
 
+    {{-- Galery --}}
+    <section
+        class="px-20 flex justify-center items-center flex-col  h-screen py-24 max-lg:px-6 max-lg:py-30  text-stone-700 relative lg:mx-10 overflow-hidden">
+        <div class="absolute w-96 h-auto left-0 top-0">
+            <img src="/images/lt.png" alt="left top" class="object-cover">
+        </div>
+        <div class="absolute w-96 h-auto left-0 bottom-0">
+            <img src="/images/lb.png" alt="left bottom" class="object-cover">
+        </div>
+        <div class="absolute w-96 h-auto right-0 top-0">
+            <img src="/images/rt.png" alt="right top" class="object-cover">
+        </div>
+        <div class="absolute w-96 h-auto right-0 bottom-0">
+            <img src="/images/rb.png" alt="right bottom" class="object-cover">
+        </div>
+
+        <div class="relative flex flex-col items-center">
+            <h1 class="font-bold text-6xl ">Our <br>Memories</h1>
+            <i class="font-medium">Tumbuh Bersama Fordi Mapelar</i>
+            <button class="mt-5 px-4 py-2 hover:bg-[#09182C] text-white rounded-full text-xs font-bold cursor-pointer"><a
+                    href="{{ route('galeri') }}">Ketemu! Yuk Cek Galeri Kita</a></button>
+        </div>
+    </section>
 
     {{-- manifesto penalaran --}}
     <section class="px-40 py-48  max-lg:px-16 max-lg:py-30 grid max-lg:grid-cols-1 grid-cols-2 text-stone-700 gap-7">

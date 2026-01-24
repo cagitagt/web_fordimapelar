@@ -31,3 +31,7 @@ Route::get('/program-kerja', function () {
 Route::get('/layanan', function () {
     return view('user.layanan');
 })->name('layanan');
+
+Route::get('/galeri', function () {
+    return view('user.galeri');
+})->name('galeri');
