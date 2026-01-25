@@ -2,35 +2,64 @@
 
 @section('content')
     {{-- hero section --}}
-    <section class="relative w-full h-screen flex justify-center items-center px-40 py-20 max-md:px-12 max-md:py-6 overflow-hidden text-stone-700">
-        {{-- subtle background glow --}}
-        <div class="absolute inset-0 -z-10 "></div>
+    <section>
+        <div class="lg:h-screen h-250 w-full bg-white relative ">
 
-        <div class="flex flex-col items-center text-center gap-2">
-            <span class="uppercase tracking-widest text-sm font-semibold text-amber-600">
-                FORDI MAPELAR 2026
-            </span>
+            {{-- paper top and bottom --}}
+            <div class="absolute z-10 bottom-0 w-full h-auto">
+                <img src="/images/paper.png" alt="" class="w-full h-full object-contain">
+            </div>
+            <div class="absolute z-10 top-0 rotate-180 w-full h-auto">
+                <img src="/images/paper.png" alt="" class="w-full h-full object-contain">
+            </div>
 
-            <h1 class="font-extrabold text-5xl leading-tight max-md:text-4xl">
-                Kabinet <span class="text-amber-600">Dharma Utthita</span>
-            </h1>
+            {{-- background color --}}
+            <div class="absolute inset-0 z-0"
+                style="
+                        background-color: #fef0dd;
+                        background-image:
+                        linear-gradient(to right, #ECE80B 1px, transparent 1px),
+                        linear-gradient(to bottom, #ECE80B 1px, transparent 1px);
+                        background-size: 40px 40px;
+                    ">
 
-            <p class="max-w-2xl font-medium text-lg ">
-                Mengenal lebih dekat visi, misi, dan semangat pergerakan UKM Fordi Mapelar.
-            </p>
 
-            <div class="flex gap-3 mt-5  items-center justify-center flex-wrap">
-                    <button class=" px-6 py-2 bg-amber-600 text-white rounded-full font-bold cursor-pointer">
-                        E-Booklet
-                    </button>
-                    <button
-                        class=" px-6 py-2 bg-white border-stone-700 rounded-full font-bold cursor-pointer  border-2"><a href="{{ route('program-kerja') }}">Program Kerja</a></button>
+                {{-- content inside paper --}}
+                <div
+                    class="relative flex justify-center items-center h-full  flex-col text-stone-700  px-6 lg:px-20  text-center ">
+                    <span class="uppercase tracking-widest text-sm font-semibold text-amber-600">
+                        FORDI MAPELAR 2026
+                    </span>
+
+                    <h1 class="font-extrabold text-5xl leading-tight max-md:text-4xl">
+                        Kabinet <span class="text-amber-600">Dharma Utthita</span>
+                    </h1>
+
+                    <p class="max-w-2xl font-medium text-lg ">
+                        Mengenal lebih dekat visi, misi, dan semangat pergerakan UKM Fordi Mapelar.
+                    </p>
+
+                    <div class="flex gap-3 mt-5  items-center justify-center flex-wrap">
+                        <button class=" px-6 py-2 bg-amber-600 text-white rounded-full font-bold cursor-pointer">
+                            E-Booklet
+                        </button>
+                        <button
+                            class=" px-6 py-2 bg-white border-stone-700 rounded-full font-bold cursor-pointer  border-2"><a
+                                href="{{ route('program-kerja') }}">Program Kerja</a>
+                        </button>
+                    </div>
                 </div>
+
+
+            </div>
+            {{-- content end inside paper --}}
+
+        </div>
         </div>
     </section>
 
     {{-- company profile/image --}}
-    <section class=" px-40 py-20 max-md:px-12 max-md:py-6">
+    <section class=" px-40 py-20 max-lg:px-6 max-md:py-6">
         <div
             class="relative min-h-120 w-full rounded-3xl overflow-hidden shadow-xl bg-amber-500 flex items-center justify-center">
 
@@ -45,7 +74,7 @@
     </section>
 
     {{-- narasi kabinet --}}
-    <section class=" px-40 py-20 max-md:px-12 max-md:py-6">
+    <section class=" px-40 py-20 max-lg:px-6 max-md:py-6">
         <div class="max-w-4xl mx-auto">
             <div class=" bg-white p-14 rounded-3xl ">
 
@@ -65,7 +94,7 @@
     </section>
 
     {{-- sambutan ketua umum --}}
-    <section class="px-40 py-20 max-md:px-12 max-md:py-6">
+    <section class="px-40 py-20 max-lg:px-6 max-md:py-6">
         <h1 class="font-bold text-4xl mb-10 text-stone-700">Sambutan <span class="text-amber-500">Ketua Umum</span></h1>
         <div class="grid max-md:grid-cols-1 grid-cols-2 gap-5  text-center">
             <div class=" flex items-center justify-center flex-col gap-5 text-white p-10">
@@ -73,17 +102,20 @@
                     <img src="/images/sample.jpg" alt="ketua umum" class="w-full h-full object-cover rounded-3xl ">
                 </div>
                 <h5 class="py-2 px-5 rounded-2xl font-bold bg-amber-500">
-                    Annisa Aulia 
+                    Annisa Aulia
                 </h5>
             </div>
             <div class="flex items-center justify-center flex-col gap-5 text-amber-500 p-10 text-justify">
-                <i >Lorem ipsum, dolor sit amet consectetur adipisicing elit. At dolorem voluptatem recusandae voluptates voluptatibus est accusantium quis veniam obcaecati ratione, nihil maiores aut iste magni tenetur praesentium consequuntur doloremque vel neque saepe! Aspernatur, veniam dolor. Ex impedit ad placeat r</i>
+                <i>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At dolorem voluptatem recusandae voluptates
+                    voluptatibus est accusantium quis veniam obcaecati ratione, nihil maiores aut iste magni tenetur
+                    praesentium consequuntur doloremque vel neque saepe! Aspernatur, veniam dolor. Ex impedit ad placeat
+                    r</i>
             </div>
         </div>
     </section>
 
     {{-- visi misi --}}
-    <section class="px-40 py-20 max-md:px-12 max-md:py-6">
+    <section class="px-40 py-20 max-lg:px-6 max-md:py-6">
         <h1 class="font-bold text-4xl mb-10 text-stone-700"> <span class="text-amber-500">Visi dan Misi</span> Kabinet</h1>
         <div class="grid max-md:grid-cols-1 grid-cols-2 gap-5 text-center">
             <div class="bg-amber-500 p-16 text-white flex items-center justify-center flex-col gap-5">
@@ -115,7 +147,7 @@
     </section>
 
     {{-- departemen dan pengertian --}}
-    <section class="px-40 py-20 max-md:px-12 max-md:py-6">
+    <section class="px-40 py-20 max-lg:px-6 max-md:py-6">
         <h1 class="font-bold text-4xl mb-10 text-stone-700"> <span class="text-amber-500"> Struktur </span>Kabinet</h1>
     </section>
 @endsection

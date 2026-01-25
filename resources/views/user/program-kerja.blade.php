@@ -1,7 +1,8 @@
 @extends('layout.user')
 @section('content')
-<div class="min-h-110 w-full bg-white relative overflow-hidden flex justify-center items-center">
-            <diV class="absolute inset-0 z-0  "
+<section class="min-h-110 w-full relative overflow-hidden">
+        <!-- Dual Gradient Overlay (Top Background) -->
+        <diV class="absolute inset-0 z-0  "
             style="
             background-image:
                 linear-gradient(to right, rgba(229,231,235,0.8) 1px, transparent 1px),
@@ -16,19 +17,12 @@
             mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
             -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
         ">
-            </div>
-
-            <!-- Title -->
-            <div
-                class="relative z-10 mt-16 flex flex-col justify-center items-center h-full w-full
-                       text-stone-700 px-20 py-20 max-md:px-12 max-md:py-16">
-                <h1 class="text-5xl font-bold max-md:text-3xl mb-2">
-                    Program Kerja
-                </h1>
+            <div class="relative flex justify-center items-center min-h-110 flex-col text-stone-700  ">
+                <h1 class="text-5xl font-bold max-md:text-3xl  mb-2 ">Program Kerja</h1>
                 <p class="text-lg max-md:text-sm text-center">
-                     Temukan Program Kerja kami yang bisa membantu kawan fordi untuk berkembang
+                    Temukan Program Kerja kami yang bisa membantu kawan fordi untuk berkembang
                 </p>
             </div>
-        </div>
-    </div>
+        </diV>
+    </section>
 @endsection

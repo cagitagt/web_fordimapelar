@@ -1,7 +1,7 @@
 @extends('layout.user')
 
 @section('content')
-    <div class="min-h-110 w-full bg-white relative overflow-hidden">
+    <section class="min-h-110 w-full relative overflow-hidden">
         <!-- Dual Gradient Overlay (Top Background) -->
         <diV class="absolute inset-0 z-0  "
             style="
@@ -18,17 +18,17 @@
             mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
             -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
         ">
-        <div
-                class="relative flex justify-center items-center h-full w-full flex-col text-stone-700 px-20 py-5 max-md:px-12 max-md:py-5 mt-10">
-                <h1 class="text-5xl font-bold max-md:text-3xl  mb-2">Berita & Informasi</h1>
+            <div class="relative flex justify-center items-center min-h-110 flex-col text-stone-700  ">
+                <h1 class="text-5xl font-bold max-md:text-3xl  mb-2 ">Berita & Informasi</h1>
                 <p class="text-lg max-md:text-sm text-center">
                     Informasi dan kabar terkini seputar kegiatan, agenda, dan
                     dinamika Fordi Mapelar.
                 </p>
             </div>
         </diV>
-    </div>
-    <div class=" px-16 py-20 max-md:px-6 max-md:py-6 grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-7">
+    </section>
+
+    <section class=" px-16 py-20 max-md:px-6 max-md:py-6 grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-7 ">
         <div class="bg-white rounded-2xl hover:shadow-2xl shadow-lg overflow-hidden group">
             <div class="h-48 w-full overflow-hidden">
                 <img src="/images/sample.jpg" alt=""
@@ -108,5 +108,5 @@
                 <p class="text-gray-600 text-sm">Selasa, 16 September 2025</p>
             </div>
         </div>
-    </div>
+    </section>
 @endsection

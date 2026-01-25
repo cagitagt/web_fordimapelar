@@ -382,7 +382,7 @@
         <div class="relative flex flex-col items-center">
             <h1 class="font-bold text-6xl ">Our <br>Memories</h1>
             <i class="font-medium">Tumbuh Bersama Fordi Mapelar</i>
-            <button class="mt-5 px-4 py-2 hover:bg-[#09182C] text-white rounded-full text-xs font-bold cursor-pointer"><a
+            <button class="mt-5 px-4 py-2 max-lg:bg-[#09182C] lg:hover:bg-[#09182C] text-white rounded-full text-xs font-bold cursor-pointer"><a
                     href="{{ route('galeri') }}">Ketemu! Yuk Cek Galeri Kita</a></button>
         </div>
     </section>
