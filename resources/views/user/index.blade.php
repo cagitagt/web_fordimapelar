@@ -41,7 +41,7 @@
             <img src="{{ asset('images/orange.svg') }}" alt="orange"
                 class="object-cover h-80 w-80 max-lg:h-36 max-lg:w-36 ">
         </div>
-        <div class="absolute right-20 -top-10 max-sm:right-10  animate-spin  [animation-duration:40s]">
+        <div class="absolute right-20 -top-3 max-sm:right-10  animate-spin  [animation-duration:40s]">
             <img src="{{ asset('images/yellow.svg') }}" alt="yellow"
                 class="object-cover h-80 w-80 max-lg:h-36 max-lg:w-36 ">
         </div>
@@ -294,7 +294,7 @@
                             </div>
 
                             <div class="flex items-start gap-4 w-full">
-                                <div class="w-6 h-6 rounded-full bg-[#2D1C73] shrink-0 mt-1"></div>
+                                <div class="w-6 h-6 rounded-full bg-[#100C51] shrink-0 mt-1"></div>
                                 <p class="text-justify  leading-relaxed">
                                     Melambangkan bahwa anggota <span class="font-bold">FORDI MAPELAR</span> generasi muda
                                     yang mempunyai idealisme

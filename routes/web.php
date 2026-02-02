@@ -35,3 +35,7 @@ Route::get('/layanan', function () {
 Route::get('/galeri', function () {
     return view('user.galeri');
 })->name('galeri');
+
+Route::get('/photoboth', function () {
+    return view('layout.photoboth');
+})->name('photoboth');

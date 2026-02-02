@@ -8,7 +8,7 @@
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-white w-full min-h-screen font-sans">
+<body class=" bg-neutral-50  w-full min-h-screen font-sans">
     @include('partials.navbar')
 
     <main class="w-full min-h-screen ">

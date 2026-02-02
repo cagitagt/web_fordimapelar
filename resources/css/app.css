@@ -11,3 +11,12 @@
     --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
     --font-decorative: 'Birthstone Bounce', cursive;
 }
+
+/* photobooth */
+.frame-option.active {
+    border-color: #333;
+}
+
+.photo button {
+    left: 27.5%;
+}
