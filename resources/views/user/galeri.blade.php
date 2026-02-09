@@ -22,7 +22,7 @@
                     <p class="text-lg max-md:text-sm ">
                         Cerita, proses, dan karya yang tumbuh bersama Kawan Fordi.
                     </p>
-                    <i class="text-xs text-amber-100">psst, coba cari photobooth tersembunyi</i>
+                    <i class="text-xs text-amber-50">psst, coba cari photobooth tersembunyi</i>
                 </div>
 
                 <a href="{{ route('photobooth') }}" class="cursor-pointer w-80 absolute right-0 max-lg:top-64 ">
@@ -33,8 +33,7 @@
 
             </section>
 
-            <div class="relative px-12 py-12 max-lg:px-6 max-lg:py-12 bg-amber-200 "></div>
-            <div class="relative px-12 py-12 max-lg:px-6 max-lg:py-12 bg-amber-800 "></div>
+            <div class="relative px-12 py-24 max-lg:px-6 max-lg:py-12 bg-amber-200 "></div>
             {{-- image column --}}
             <section class="relative px-12 py-24 max-lg:px-6 max-lg:py-12">
                 <div class="columns-3 max-lg:columns-2 max-md:columns-1 gap-10">

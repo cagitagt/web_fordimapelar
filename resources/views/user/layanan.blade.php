@@ -61,7 +61,7 @@
                         </p>
                     </div>
 
-                    <div class="text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e]">
+                    <div class="text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e] cursor-pointer">
                         Klik di sini
                     </div>
                 </div>
@@ -79,11 +79,11 @@
                     </div>
 
                     <div class=" flex gap-2.5">
-                        <a class="text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e]">
-                            081231201809
+                        <a class="text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e] cursor-pointer">
+                            Sharleen - 081231201809
                         </a>
-                        <a class="text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e]">
-                            081231201809
+                        <a class="text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e] cursor-pointer">
+                            Zaskia - 081231201809
                         </a>
                     </div>
 
@@ -95,7 +95,7 @@
 
         <!-- PARTNERSHIP -->
         <div class="flex flex-col gap-20">
-            <i class="text-3xl text-center max-md:text-xl font-semibold text-white bg-[#0595dd9e] rounded-t-2xl">
+            <i class="text-3xl text-center max-md:text-xl font-semibold text-white bg-[#0595dd9e] rounded-t-2xl ">
                 Kerjasama & Kemitraan Publikasi
             </i>
 
@@ -112,7 +112,7 @@
                             Syarat Pengajuan Kerjasama untuk <span class="font-bold">Internal Universitas Brawijaya</span>
                         </p>
                     </div>
-                    <div class="text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e]">
+                    <div class="text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e] cursor-pointer">
                         Klik di sini
                     </div>
 
@@ -129,7 +129,7 @@
                         </p>
                     </div>
 
-                    <div class="text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e]">
+                    <div class="text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e] cursor-pointer">
                         Klik di sini
                     </div>
                 </div>
@@ -144,7 +144,7 @@
                             Pengajuan Kerjasama publikasi <br> <i class="font-semibold">*harap dibaca ketentuan terlebih dahulu</i> </span>
                         </p>
                     </div>
-                    <div class="text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e]">
+                    <div class="text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e] cursor-pointer">
                         Klik di sini
                     </div>
 
