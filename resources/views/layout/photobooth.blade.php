@@ -41,7 +41,7 @@
             <div class="flex flex-col gap-10 justify-center items-center p-5 ">
 
                 <!-- Frame Selector -->
-                <div class="grid grid-cols-4 gap-3 justify-center py-3 px-4 rounded-2xl shadow-2xl ">
+                <div class="grid grid-cols-4 gap-3 justify-center py-5 px-5 rounded-2xl shadow-2xl max-h-39 overflow-y-auto ">
                     <img
                         src="{{ asset('/images/framephoto/frame1.png') }}"
                         class="frame-option active w-20 h-14 rounded-lg cursor-pointer border-2 border-transparent hover:border-stone-400 transition"
@@ -54,6 +54,14 @@
                         src="{{ asset('/images/framephoto/frame3.png') }}"
                         class="frame-option w-20 h-14 rounded-lg cursor-pointer border-2 border-transparent hover:border-stone-400 transition"
                     >
+                    @foreach ($frames as $frame)
+                    <img
+                        src="{{ asset('storage/' . $frame->frame) }}"
+                        class="frame-option w-20 h-14 rounded-lg cursor-pointer border-2 border-transparent hover:border-stone-400 transition"
+                    >
+                        
+                    @endforeach
+
                 
                 </div>
 

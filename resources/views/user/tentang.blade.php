@@ -28,11 +28,11 @@
                 <div
                     class="relative flex justify-center items-center h-full  flex-col text-stone-700  px-6 lg:px-20  text-center ">
                     <span class="uppercase tracking-widest text-sm font-bold text-[#100C51]">
-                        FORDI MAPELAR 2026
+                        FORDI MAPELAR {{ $aboutcabinet->cabinet_year }}
                     </span>
 
                     <h1 class="font-extrabold text-5xl leading-tight max-md:text-4xl">
-                        Kabinet <span class="text-[#100C51]">Dharma Utthita</span>
+                        Kabinet <span class="text-[#100C51]">{{ $aboutcabinet->cabinet_name }}</span>
                     </h1>
 
                     <p class="max-w-2xl font-medium text-lg ">
@@ -40,9 +40,10 @@
                     </p>
 
                     <div class="flex gap-3 mt-5  items-center justify-center flex-wrap">
-                        <button class=" px-6 py-2 bg-[#100C51] text-white rounded-full font-bold cursor-pointer">
+                        <a href="{{ $aboutcabinet->cabinet_ebook }}" target="_blank" rel="noopener noreferrer"
+                            class=" px-6 py-2 bg-[#100C51] text-white rounded-full font-bold cursor-pointer">
                             E-Booklet
-                        </button>
+                        </a>
                         <button
                             class=" px-6 py-2 bg-white border-stone-700 rounded-full font-bold cursor-pointer  border"><a
                                 href="{{ route('program-kerja') }}">Program Kerja</a>
@@ -63,13 +64,23 @@
         <div
             class="relative min-h-120 w-full rounded-3xl overflow-hidden shadow-xl border-[#100C51] border-4 bg-[#100C51] flex items-center justify-center">
 
-            {{-- logika img/video yt --}}
-            <span class="text-white/70 font-semibold text-lg">
-                Visual Kabinet
-            </span>
+
+            @if (!empty($aboutcabinet?->company_profile_link))
+                <iframe src="{{ $aboutcabinet->company_profile_link }}" class="absolute inset-0 w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            @elseif (!empty($aboutcabinet?->cabinet_visual))
+                <img src="{{ asset('storage/' . $aboutcabinet->cabinet_visual) }}"
+                    class="absolute inset-0 w-full h-full object-cover">
+            @else
+                <span class="text-white/70 font-semibold text-lg">
+                    Visual Kabinet
+                </span>
+            @endif
 
             {{-- optional overlay --}}
-            <div class="absolute inset-0 bg-black/10"></div>
+            <div class="absolute inset-0 bg-black/10 pointer-events-none"></div>
         </div>
     </section>
 
@@ -81,13 +92,8 @@
                 <h1 class="font-bold text-4xl  mb-5 text-stone-700"><span class="text-[#100C51]">Narasi Besar</span> Kabinet
                 </h1>
 
-                <p class="text-gray-700 leading-relaxed  text-justify ">
-                    Kabinet Forum Studi Pengembang Penalaran Universitas Brawijaya 2025 bernama "Dharma Utthita" yang
-                    diambil dari bahasa Sansekerta yang berarti "Kebangkitan Kebenaran". Sesuai nama kabinet kami, kami
-                    berharap bahwa kami dapat membangkitkan Fordi Mapelar UB untuk terus memperjuangkan kebenaran. Prinsip
-                    ini selaras pula dengan semboyan kami "Nalar Hasta Terusing Budi" yang berarti bernalar, berkarya,
-                    menganalisa pikiran adalah kelanjutan dari budi yang arif untuk membentuk manusia seutuhnya sesuai
-                    dengan hakikat manusia.
+                <p class="text-gray-700   text-justify ">
+                    {!! $aboutcabinet->cabinet_narrative !!}
                 </p>
             </div>
         </div>
@@ -100,7 +106,7 @@
         <div class="grid max-md:grid-cols-1 grid-cols-2 gap-5  text-center relative">
             <div class=" flex items-center justify-center flex-col gap-5 text-white p-10 relative">
                 <div class="bg-white rounded-3xl  h-60  w-56  relative">
-                    <img src="/images/sample.jpg" alt="ketua umum"
+                    <img src="{{ asset('storage/' . $aboutcabinet->chairman_photo) }}" alt="ketua umum"
                         class="w-full h-full absolute object-cover rounded-3xl border-8 border-white z-10">
 
                     {{-- decor --}}
@@ -112,14 +118,13 @@
 
                 </div>
                 <h5 class="py-1 bg-white px-5 rounded-full font-bold  text-[#100C51] relative">
-                    Muhammad Ghazy Humaidi
+                    {{ $aboutcabinet->chairman_name }}
                 </h5>
             </div>
             <div class="flex items-center justify-center flex-col gap-5 text-[#100C51] p-10 text-justify">
-                <i>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At dolorem voluptatem recusandae voluptates
-                    voluptatibus est accusantium quis veniam obcaecati ratione, nihil maiores aut iste magni tenetur
-                    praesentium consequuntur doloremque vel neque saepe! Aspernatur, veniam dolor. Ex impedit ad placeat
-                    r</i>
+                <p class="leading-relaxed">
+                    {!! $aboutcabinet->chairman_narrative !!}
+                </p>
             </div>
         </div>
 
@@ -133,27 +138,13 @@
             <div class="bg-[#100C51] p-16 text-white flex items-center justify-center flex-col gap-5 border rounded-4xl">
                 <h1 class="font-bold text-2xl">Visi</h1>
                 <i>
-                    Membangun UKM Fordi Mapelar sebagai ruang kolaborasi yang inklusif, kritis, dan inovatif untuk
-                    menghasilkan ide-ide solutif dan aplikatif serta meningkatkan daya saing intelektual mahasiswa.
+                    {!! $aboutcabinet->cabinet_vision !!}
                 </i>
             </div>
             <div class="text-[#100C51] p-10 flex flex-col gap-5 text-justify">
                 <h1 class="font-bold text-2xl">Misi</h1>
                 <p>
-                    Mengoptimalkan pengelolaan manajemen organisasi guna mengakomodasi kebutuhan beserta sumber daya yang
-                    sistematis
-                </p>
-                <p>
-                    Menggencarkan budaya literasi serta berpikir kritis, analitis, dan kreatif dalam setiap kegiatan
-                    organisasi melalui pengadaan forum diskusi tematik, pengkajian, serta pelatihan pengembangan
-                    pemberdayaan anggota Mendorong kolaborasi dan jaringan kemitraan dengan pihak-pihak terkait guna
-                    terciptanya transfer keilmuan dan koordinasi yang konstruktif
-
-                </p>
-                <p>
-                    Mengintensifkan publikasi ilmiah, kampanye sosial, dan hasil diskusi kajian secara masif dan konsisten
-                    guna mengapresiasi kontribusi anggota dengan baik
-                </p>
+                    {!! $aboutcabinet->cabinet_mission !!}
             </div>
         </div>
     </section>
@@ -164,7 +155,8 @@
 
         <div class="relative w-full h-150 max-md:h-96">
             <div class="my-20 relative bg-[#100C51] border-[#100C51] border-4 rounded-2xl w-full h-150  max-md:h-96">
-                <img src="" alt="">
+                <img src="{{ asset('storage/' . $aboutcabinet->cabinet_visual) }}"
+                    class="absolute inset-0 w-full h-full object-cover">
             </div>
         </div>
 
@@ -219,15 +211,14 @@
                 <h3>- Badan Pengurus Harian</h3>
             </div>
             <div class="grid grid-cols-4 max-md:grid-cols-2 gap-2 min-h-52">
-                <div
-                    class="p-4 rounded-2xl border-[#100C51] border flex flex-col justify-between h-full  hover:-translate-y-3 transition hover:text-white hover:bg-[#100C51]">
-                    <h1 class="font-bold text-2xl leading-none max-md:text-lg">Media dan Informasi</h1>
-                    <p class="text-sm text-justify max-md:text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Iusto temporibus
-                        delectus dolor facilis, ab molestiae accusamus recusandae expedita animi, dolorum, </p>
-                </div>
-
-
+                @foreach ($departments as $department)
+                    <div
+                        class="p-4 rounded-2xl border-[#100C51] border flex flex-col justify-between h-full  hover:-translate-y-3 transition hover:text-white hover:bg-[#100C51]">
+                        <h1 class="font-bold text-2xl leading-none max-md:text-lg mb-5">{{ $department->name_dept }}</h1>
+                        <p class="text-sm text-justify max-md:text-xs">{{ $department->description }}</p>
+                    </div>
+                    
+                @endforeach
 
             </div>
         </div>

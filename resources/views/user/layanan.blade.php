@@ -51,7 +51,8 @@
             <div class="grid grid-cols-3 max-md:grid-cols-1 gap-10 min-h-40">
 
                 <!-- Visitasi, Kolaborasi, dan Undangan -->
-                <div class="rounded-xl hover:border border-white hover:border-[#0595dd9e] flex flex-col justify-center items-center p-8">
+                <div
+                    class="rounded-xl hover:border border-white hover:border-[#0595dd9e] flex flex-col justify-center items-center p-8">
                     <div class="">
                         <img src="/images/svg/invitation.svg" alt="" class="mb-5">
                         <h1 class="font-bold mb-2  leading-none">Visitasi, Kolaborasi, dan Undangan</h1>
@@ -61,9 +62,11 @@
                         </p>
                     </div>
 
-                    <div class="text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e] cursor-pointer">
+                    <a href="{{ $external_setting->invitation_url }}" target="_blank" rel="noopener noreferrer"
+                        class="inline-block text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e] cursor-pointer">
                         Klik di sini
-                    </div>
+                    </a>
+
                 </div>
 
                 <!-- narahubung -->
@@ -73,17 +76,18 @@
                         <img src="/images/svg/narahubung.svg" alt="" class="mb-5">
                         <h1 class="font-bold text-lg mb-2">Narahubung</h1>
                         <p class="text-xs"> Hubungi Kami di Nomor Ini untuk
-                            Pengajuan dan Konfirmasi Kerjasama baik dari <span class="font-bold">Internal maupun Eksternal Universitas
+                            Pengajuan dan Konfirmasi Kerjasama baik dari <span class="font-bold">Internal maupun Eksternal
+                                Universitas
                                 Brawijaya</span>
                         </p>
                     </div>
 
                     <div class=" flex gap-2.5">
-                        <a class="text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e] cursor-pointer">
-                            Sharleen - 081231201809
+                        <a href="{{ $external_setting->contact1_link }}" target="_blank" rel="noopener noreferrer" class="text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e] cursor-pointer">
+                            {{ $external_setting->contact1_name }}
                         </a>
-                        <a class="text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e] cursor-pointer">
-                            Zaskia - 081231201809
+                        <a href="{{ $external_setting->contact2_link }}" target="_blank" rel="noopener noreferrer" class="text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e] cursor-pointer">
+                            {{ $external_setting->contact2_name }}
                         </a>
                     </div>
 
@@ -112,9 +116,9 @@
                             Syarat Pengajuan Kerjasama untuk <span class="font-bold">Internal Universitas Brawijaya</span>
                         </p>
                     </div>
-                    <div class="text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e] cursor-pointer">
+                    <a href="{{ $external_setting->internal_terms_url }}" target="_blank" rel="noopener noreferrer"  class="text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e] cursor-pointer">
                         Klik di sini
-                    </div>
+                    </a>
 
                 </div>
 
@@ -129,9 +133,9 @@
                         </p>
                     </div>
 
-                    <div class="text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e] cursor-pointer">
+                    <a href="{{ $external_setting->external_terms_url }}" target="_blank" rel="noopener noreferrer" class="text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e] cursor-pointer">
                         Klik di sini
-                    </div>
+                    </a>
                 </div>
 
                 <div
@@ -141,12 +145,13 @@
                         <img src="/images/svg/form.svg" alt="" class="mb-5 ">
                         <h1 class="font-bold text-lg mb-2">Form Pengajuan Publikasi</h1>
                         <p class="text-xs">
-                            Pengajuan Kerjasama publikasi <br> <i class="font-semibold">*harap dibaca ketentuan terlebih dahulu</i> </span>
+                            Pengajuan Kerjasama publikasi <br> <i class="font-semibold">*harap dibaca ketentuan terlebih
+                                dahulu</i> </span>
                         </p>
                     </div>
-                    <div class="text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e] cursor-pointer">
+                    <a href="{{ $external_setting->terms_form_url }}" target="_blank" rel="noopener noreferrer" class="text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e] cursor-pointer">
                         Klik di sini
-                    </div>
+                    </a>
 
                 </div>
             </div>
@@ -155,7 +160,7 @@
 
     {{-- faq --}}
     <section class="px-40 py-20 max-lg:px-6 max-md:py-10">
-         <h1 class="text-5xl font-bold max-md:text-3xl mb-20 text-center text-[#0595dd9e]">
+        <h1 class="text-5xl font-bold max-md:text-3xl mb-20 text-center text-[#0595dd9e]">
             - frequently asked questions -
         </h1>
     </section>

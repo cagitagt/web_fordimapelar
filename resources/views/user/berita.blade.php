@@ -28,85 +28,47 @@
         </diV>
     </section>
 
-    <section class=" px-16 py-20 max-md:px-6 max-md:py-6 grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-7 ">
-        <div class="bg-white rounded-2xl hover:shadow-2xl shadow-lg overflow-hidden group">
-            <div class="h-48 w-full overflow-hidden">
-                <img src="/images/sample.jpg" alt=""
-                    class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110">
+    <section class="px-16 pb-20 max-md:px-6 max-md:py-6">
+
+        <a href="{{ route('news.show', $news[0]->slug) }}"
+            class="bg-white rounded-2xl hover:shadow-2xl shadow-lg overflow-hidden group grid grid-cols-2 max-lg:grid-cols-1 h-96 w-full mb-20">
+            <div class=" overflow-hidden ">
+                <img src="{{ asset('storage/' . $news[0]->thumbnail) }}" alt="{{ $news[0]->title }}"
+                    class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105 rounded-2xl">
             </div>
 
-            <div class="p-5 flex flex-col gap-4">
-                <h5 class="text-teal-700 font-semibold">Event</h5>
-                <h2 class="text-xl text-stone-700 font-extrabold">
-                    Public Speaking Jadi Topik Perdana Airlangga Mentoring Room 2025,
-                    Kepuasan Peserta Capai Kategori Sangat Puas
+            <div class="p-5 flex flex-col gap-4 justify-center">
+                <h5 class="text-teal-700 font-semibold">{{ $news[0]->newsCategory->title }}</h5>
+                <h2 class="text-4xl text-stone-700 font-extrabold">
+                    {{ $news[0]->title }}
                 </h2>
-                <p class="text-gray-600 text-sm">Selasa, 16 September 2025</p>
-            </div>
-        </div>
+                <p class="text-stone-500 text-sm">
+                    {{ \Str::limit(strip_tags($news[0]->content), 150) }}
+                </p>
 
-        <div class="bg-white rounded-2xl hover:shadow-2xl shadow-lg overflow-hidden group">
-            <div class="h-48 w-full overflow-hidden">
-                <img src="/images/sample.jpg" alt=""
-                    class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110">
+                <p class="text-gray-600 text-sm">{{ \Carbon\Carbon::parse($news[0]->created_at)->format('d M Y') }}</p>
             </div>
+        </a>
 
-            <div class="p-5 flex flex-col gap-4">
-                <h5 class="text-teal-700 font-semibold">Event</h5>
-                <h2 class="text-xl text-stone-700 font-extrabold">
-                    Public Speaking Jadi Topik Perdana Airlangga Mentoring Room 2025,
-                    Kepuasan Peserta Capai Kategori Sangat Puas
-                </h2>
-                <p class="text-gray-600 text-sm">Selasa, 16 September 2025</p>
-            </div>
-        </div>
+        <div class="  grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-7 ">
+            @foreach ($news->skip(1) as $item)
+                <a href="{{ route('news.show', $item->slug) }}" class="bg-white rounded-2xl hover:shadow-2xl shadow-lg overflow-hidden group">
+                    <div class="h-48 w-full overflow-hidden">
+                        <img src="{{ asset('storage/' . $item->thumbnail) }}" alt="{{ $item->title }}"
+                            class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110">
+                    </div>
 
-        <div class="bg-white rounded-2xl hover:shadow-2xl shadow-lg overflow-hidden group">
-            <div class="h-48 w-full overflow-hidden">
-                <img src="/images/sample.jpg" alt=""
-                    class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110">
-            </div>
+                    <div class="p-5 flex flex-col gap-2">
+                        <h5 class="text-teal-700 font-semibold leading-none">{{ $item->newsCategory->title }}</h5>
+                        <h2 class="text-lg text-stone-700 font-extrabold">
+                            {{ $item->title }}
+                        </h2>
+                        <p class="text-gray-600 text-sm">{{ \Carbon\Carbon::parse($item->created_at)->format('d M Y') }}
+                        </p>
+                    </div>
+                </a>
+            @endforeach
 
-            <div class="p-5 flex flex-col gap-4">
-                <h5 class="text-teal-700 font-semibold">Event</h5>
-                <h2 class="text-xl text-stone-700 font-extrabold">
-                    Public Speaking Jadi Topik Perdana Airlangga Mentoring Room 2025,
-                    Kepuasan Peserta Capai Kategori Sangat Puas
-                </h2>
-                <p class="text-gray-600 text-sm">Selasa, 16 September 2025</p>
-            </div>
-        </div>
-
-        <div class="bg-white rounded-2xl hover:shadow-2xl shadow-lg overflow-hidden group">
-            <div class="h-48 w-full overflow-hidden">
-                <img src="/images/sample.jpg" alt=""
-                    class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110">
-            </div>
-
-            <div class="p-5 flex flex-col gap-4">
-                <h5 class="text-teal-700 font-semibold">Event</h5>
-                <h2 class="text-xl text-stone-700 font-extrabold">
-                    Public Speaking Jadi Topik Perdana Airlangga Mentoring Room 2025,
-                    Kepuasan Peserta Capai Kategori Sangat Puas
-                </h2>
-                <p class="text-gray-600 text-sm">Selasa, 16 September 2025</p>
-            </div>
-        </div>
-
-        <div class="bg-white rounded-2xl hover:shadow-2xl shadow-lg overflow-hidden group">
-            <div class="h-48 w-full overflow-hidden">
-                <img src="/images/sample.jpg" alt=""
-                    class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110">
-            </div>
-
-            <div class="p-5 flex flex-col gap-4">
-                <h5 class="text-teal-700 font-semibold">Event</h5>
-                <h2 class="text-xl text-stone-700 font-extrabold">
-                    Public Speaking Jadi Topik Perdana Airlangga Mentoring Room 2025,
-                    Kepuasan Peserta Capai Kategori Sangat Puas
-                </h2>
-                <p class="text-gray-600 text-sm">Selasa, 16 September 2025</p>
-            </div>
         </div>
     </section>
 @endsection
