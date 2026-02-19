@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="fixed top-0 left-0 right-0 z-20 bg-white/80 shadow-lg text-[#09182C]">
+<nav class="fixed top-0 left-0 right-0 z-80 bg-white/80  text-[#09182C]">
   <div class="flex items-center justify-between px-6 lg:px-20 py-4">
 
     <!-- Logo -->

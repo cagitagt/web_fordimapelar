@@ -128,7 +128,6 @@
             </div>
         </div>
 
-        <div class=""></div>
     </section>
 
     {{-- visi misi --}}
@@ -156,10 +155,15 @@
         <div class="relative w-full h-150 max-md:h-96">
             <div class="my-20 relative bg-[#100C51] border-[#100C51] border-4 rounded-2xl w-full h-150  max-md:h-96">
                 <img src="{{ asset('storage/' . $aboutcabinet->cabinet_visual) }}"
-                    class="absolute inset-0 w-full h-full object-cover">
+                    class=" preview-image absolute inset-0 w-full h-full object-cover rounded-2xl"
+                    data-image="{{ asset('storage/' . $aboutcabinet->cabinet_visual) }}">
             </div>
         </div>
 
+        <!--  Image Modal -->
+        <div id="globalImageModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-90">
+            <img id="globalModalImage" class="max-w-[90%] max-h-[90%] rounded-xl shadow-2xl">
+        </div>
 
         <div class=" my-20">
             {{-- BPI --}}
@@ -167,42 +171,38 @@
                 <h3>BPI</h3>
                 <h3>- Badan Pengurus Inti</h3>
             </div>
+            @php
+                $cards = [
+                    [
+                        'BPI' => 'Dewan Pertimbangan',
+                        'description' =>
+                            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto temporibus delectus dolor facilis, ab molestiae accusamus recusandae expedita animi, dolorum, ',
+                    ],
+                    [
+                        'BPI' => 'Ketua Umum',
+                        'description' =>
+                            'Lorem ipsum dolor sit amet consectetur adipisi Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, reprehenderit. Magni id corporis repudiandae, delectus velit, possimus repellat necessitatibus expedita voluptatem sunt omnis? ',
+                    ],
+                    [
+                        'BPI' => 'Sekretaris Umum',
+                        'description' =>
+                            'Lorem ipsum dolor sit amet consectetur adipisi Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, reprehenderit. Magni id corporis repudiandae, delectus velit, possimus repellat ',
+                    ],
+                    [
+                        'BPI' => 'Bendahara Umum',
+                        'description' =>
+                            'Lorem ipsum dolor sit amet consectetur adipisi Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, reprehenderit. Magni id corporis repudiandae, delectus velit, possimus repellat ',
+                    ],
+                ];
+            @endphp
             <div class="grid grid-cols-4 max-sm:grid-cols-2 max-lg:grid-cols-3  gap-2 min-h-52 ">
-                <div
-                    class="p-4 rounded-2xl border-[#100C51] border flex flex-col justify-between h-full  hover:-translate-y-3 transition hover:text-white hover:bg-[#100C51]">
-                    <h1 class="font-bold text-2xl leading-none max-md:text-lg ">Dewan Pertimbangan</h1>
-                    <p class="text-sm text-justify max-md:text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Iusto temporibus
-                        delectus dolor facilis, ab molestiae accusamus recusandae expedita animi, dolorum, </p>
-                </div>
-
-                <div
-                    class="p-4 rounded-2xl border-[#100C51] border flex flex-col justify-between h-full hover:-translate-y-3 transition hover:text-white hover:bg-[#100C51] ">
-                    <h1 class="font-bold text-2xl mb-5 leading-none max-md:text-lg ">Ketua <br> Umum</h1>
-                    <p class="text-sm text-justify max-md:text-xs">Lorem ipsum dolor sit amet consectetur adipisi Lorem
-                        ipsum dolor sit amet
-                        consectetur adipisicing elit. Quos, reprehenderit. Magni id corporis repudiandae, delectus velit,
-                        possimus repellat necessitatibus expedita voluptatem sunt omnis? </p>
-                </div>
-
-                <div
-                    class="p-4 rounded-2xl border-[#100C51] border flex flex-col justify-between h-full  hover:-translate-y-3 transition hover:text-white hover:bg-[#100C51]">
-                    <h1 class="font-bold text-2xl mb-5 leading-none max-md:text-lg">Sekretaris Umum</h1>
-                    <p class="text-sm text-justify max-md:text-xs">Lorem ipsum dolor sit amet consectetur adipisi Lorem
-                        ipsum dolor sit amet
-                        consectetur adipisicing elit. Quos, reprehenderit. Magni id corporis repudiandae, delectus velit,
-                        possimus repellat </p>
-                </div>
-
-                <div
-                    class="p-4 rounded-2xl border-[#100C51] border flex flex-col justify-between h-full  hover:-translate-y-3 transition hover:text-white hover:bg-[#100C51]">
-                    <h1 class="font-bold text-2xl mb-5 leading-none max-md:text-lg">Bendahara <br> Umum</h1>
-                    <p class="text-sm text-justify max-md:text-xs">Lorem ipsum dolor sit amet consectetur adipisi Lorem
-                        ipsum dolor sit amet
-                        consectetur adipisicing elit. Quos, reprehenderit. Magni id corporis repudiandae, delectus velit,
-                        possimus repellat </p>
-                </div>
-
+                @foreach ($cards as $card)
+                    <div
+                        class="p-4 rounded-2xl border-[#100C51] border flex flex-col justify-between h-full  hover:-translate-y-3 transition hover:text-white hover:bg-[#100C51]">
+                        <h1 class="font-bold text-2xl leading-none max-md:text-lg mb-5">{{ $card['BPI'] }}</h1>
+                        <p class="text-sm text-justify max-md:text-xs">{{ $card['description'] }}</p>
+                    </div>
+                @endforeach
             </div>
 
             {{-- BPH --}}
@@ -217,7 +217,6 @@
                         <h1 class="font-bold text-2xl leading-none max-md:text-lg mb-5">{{ $department->name_dept }}</h1>
                         <p class="text-sm text-justify max-md:text-xs">{{ $department->description }}</p>
                     </div>
-                    
                 @endforeach
 
             </div>

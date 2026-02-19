@@ -10,14 +10,36 @@
                 <p>Author : {{ $news->author_name }}</p>
             </div>
             <div class="w-full">
-                <img src="{{ asset('storage/' . $news->thumbnail) }}" alt="" class="w-full h-full object-contain  rounded-2xl">
+                <img src="{{ asset('storage/' . $news->thumbnail) }}" alt=""
+                    class="w-full h-full object-contain  rounded-2xl">
                 <p class="text-stone-500 font-semibold mt-5">Gambar artikel : "{{ $news->title }}"</p>
             </div>
 
             <div class="text-stone-700 text-justify mt-20 text-lg">
-            {!! $news->content !!}
+                {!! $news->content !!}
+            </div>
         </div>
+
+        <div class="grid max-lg:grid-cols-1 grid-cols-3 gap-10">
+            @foreach ($newests as $newest)
+                <a href="{{ route('news.show', $newest->slug) }}" class="bg-white rounded-2xl hover:shadow-2xl shadow-lg overflow-hidden group">
+                    <div class="h-48 w-full overflow-hidden">
+                        <img src="{{ asset('storage/' . $newest->thumbnail) }}" alt="{{ $newest->title }}"
+                            class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110">
+                    </div>
+
+                    <div class="p-5 flex flex-col gap-2">
+                        <h5 class="text-teal-700 font-semibold leading-none">{{ $newest->newsCategory->title }}</h5>
+                        <h2 class="text-lg text-stone-700 font-extrabold">
+                            {{ $newest->title }}
+                        </h2>
+                        <p class="text-gray-600 text-sm">{{ \Carbon\Carbon::parse($newest->created_at)->format('d M Y') }}
+                        </p>
+                    </div>
+                </a>
+                
+            @endforeach
         </div>
-        
+
     </section>
 @endsection
