@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 20, 2026 at 07:03 AM
+-- Generation Time: Feb 20, 2026 at 07:44 AM
 -- Server version: 8.0.44
 -- PHP Version: 8.3.20
 
@@ -50,7 +50,7 @@ CREATE TABLE `about_cabinets` (
 --
 
 INSERT INTO `about_cabinets` (`id`, `cabinet_name`, `cabinet_year`, `cabinet_ebook`, `cabinet_visual`, `company_profile_link`, `cabinet_narrative`, `chairman_name`, `chairman_photo`, `chairman_narrative`, `cabinet_vision`, `cabinet_mission`, `cabinet_structure_img`, `created_at`, `updated_at`) VALUES
-(1, 'APA YAHH', '2026', 'https://cagitadiandev.vercel.app/', '01KHFC1VDHG4HK93AW70P1ZA3D.png', 'https://www.youtube.com/embed/jAYviJQYcAo', '<p><br></p><p><br></p><p>Kabinet Forum Studi Pengembang Penalaran<strong> Universitas Brawijaya 2025 </strong>bernama \"Dharma Utthita\" yang diambil dari bahasa Sansekerta yang berarti \"Kebangkitan Kebenaran\". Sesuai nama kabinet kami, kami berharap bahwa kami dapat membangkitkan Fordi Mapelar UB untuk terus memperjuangkan kebenaran. Prinsip ini selaras pula dengan semboyan kami \"Nalar Hasta Terusing Budi\" yang berarti bernalar, berkarya, menganalisa pikiran adalah kelanjutan dari budi yang arif untuk membentuk manusia seutuhnya sesuai dengan hakikat manusia.</p>', 'sapa yahh', '01KHFC1VDWRM9HCMBS4J5W0CB2.png', '<p><strong>Halo</strong></p><p><em>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At dolorem voluptatem recusandae voluptates voluptatibus est accusantium quis veniam obcaecati ratione, nihil maiores aut iste magni tenetur praesentium consequuntur doloremque vel neque saepe! Aspernatur, veniam dolor. Ex impedit ad placeat r</em></p>', 'Membangun UKM Fordi Mapelar sebagai ruang kolaborasi yang inklusif, kritis, dan inovatif untuk menghasilkan ide-ide solutif dan aplikatif serta meningkatkan daya saing intelektual mahasiswa.', '<p>Mengoptimalkan pengelolaan manajemen organisasi guna mengakomodasi kebutuhan beserta sumber daya yang sistematis</p><p>Menggencarkan budaya literasi serta berpikir kritis, analitis, dan kreatif dalam setiap kegiatan organisasi melalui pengadaan forum diskusi tematik, pengkajian, serta pelatihan pengembangan pemberdayaan anggota Mendorong kolaborasi dan jaringan kemitraan dengan pihak-pihak terkait guna terciptanya transfer keilmuan dan koordinasi yang konstruktif</p><p>Mengintensifkan publikasi ilmiah, kampanye sosial, dan hasil diskusi kajian secara masif dan konsisten guna mengapresiasi kontribusi anggota dengan baik</p>', '01KH80E4ASG4YN351NEE1PQQA2.jpeg', '2026-02-11 21:06:06', '2026-02-15 01:19:34');
+(1, 'CAGITA', '2026', 'https://cagitadiandev.vercel.app/', '01KHFC1VDHG4HK93AW70P1ZA3D.png', 'https://www.youtube.com/embed/jAYviJQYcAo', '<p><br></p><p><br></p><p>Kabinet Forum Studi Pengembang Penalaran<strong> Universitas Brawijaya 2025 </strong>bernama \"Dharma Utthita\" yang diambil dari bahasa Sansekerta yang berarti \"Kebangkitan Kebenaran\". Sesuai nama kabinet kami, kami berharap bahwa kami dapat membangkitkan Fordi Mapelar UB untuk terus memperjuangkan kebenaran. Prinsip ini selaras pula dengan semboyan kami \"Nalar Hasta Terusing Budi\" yang berarti bernalar, berkarya, menganalisa pikiran adalah kelanjutan dari budi yang arif untuk membentuk manusia seutuhnya sesuai dengan hakikat manusia.</p>', 'sapa yahh', '01KHFC1VDWRM9HCMBS4J5W0CB2.png', '<p><strong>Halo</strong></p><p><em>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At dolorem voluptatem recusandae voluptates voluptatibus est accusantium quis veniam obcaecati ratione, nihil maiores aut iste magni tenetur praesentium consequuntur doloremque vel neque saepe! Aspernatur, veniam dolor. Ex impedit ad placeat r</em></p>', 'Membangun UKM Fordi Mapelar sebagai ruang kolaborasi yang inklusif, kritis, dan inovatif untuk menghasilkan ide-ide solutif dan aplikatif serta meningkatkan daya saing intelektual mahasiswa.', '<p>Mengoptimalkan pengelolaan manajemen organisasi guna mengakomodasi kebutuhan beserta sumber daya yang sistematis</p><p>Menggencarkan budaya literasi serta berpikir kritis, analitis, dan kreatif dalam setiap kegiatan organisasi melalui pengadaan forum diskusi tematik, pengkajian, serta pelatihan pengembangan pemberdayaan anggota Mendorong kolaborasi dan jaringan kemitraan dengan pihak-pihak terkait guna terciptanya transfer keilmuan dan koordinasi yang konstruktif</p><p>Mengintensifkan publikasi ilmiah, kampanye sosial, dan hasil diskusi kajian secara masif dan konsisten guna mengapresiasi kontribusi anggota dengan baik</p>', '01KH80E4ASG4YN351NEE1PQQA2.jpeg', '2026-02-11 21:06:06', '2026-02-20 00:43:51');
 
 -- --------------------------------------------------------
 
@@ -137,8 +137,8 @@ CREATE TABLE `cache` (
 --
 
 INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
-('fordimapelarub-cache-livewire-rate-limiter:a17961fa74e9275d529f489537f179c05d50c2f3', 'i:1;', 1771553836),
-('fordimapelarub-cache-livewire-rate-limiter:a17961fa74e9275d529f489537f179c05d50c2f3:timer', 'i:1771553836;', 1771553836);
+('fordimapelarub-cache-livewire-rate-limiter:a17961fa74e9275d529f489537f179c05d50c2f3', 'i:1;', 1771573396),
+('fordimapelarub-cache-livewire-rate-limiter:a17961fa74e9275d529f489537f179c05d50c2f3:timer', 'i:1771573396;', 1771573396);
 
 -- --------------------------------------------------------
 
@@ -444,9 +444,8 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('8pRa552ss1eWFKqrFUphX9T2biTg8Oc8Lt1ZnYfv', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoiVTNHN21zeTRDZUNQZlROMmw0eEx1cUNNRVMxMmlqV2tzdkpEeDdMaiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDQ6Imh0dHBzOi8vd2ViX2ZvcmRpbWFwZWxhci50ZXN0L2FkbWluL2FydHdvcmtzIjtzOjU6InJvdXRlIjtzOjM5OiJmaWxhbWVudC5hZG1pbi5yZXNvdXJjZXMuYXJ0d29ya3MuaW5kZXgiO31zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO3M6MTc6InBhc3N3b3JkX2hhc2hfd2ViIjtzOjY0OiI4NTMxMjEyMjFmYmFmYjc4MzllMjAyOWE0NDNhYWNjZmUwNWJjZTU0ZWQxODFmNGM3ZmJlYzBiYTRmMGE2M2FhIjtzOjg6ImZpbGFtZW50IjthOjA6e319', 1771570871),
-('uPwSlFSSdtxbMzy6iiVumA7cHtgiCejYE0dscpzl', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Herd/1.24.0 Chrome/120.0.6099.291 Electron/28.2.5 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiRUxwdm5GYUpHSTVrb3pvZWFzRkRqZ3FGZ1F0MXpFTnp5N3oxT29haCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDM6Imh0dHBzOi8vd2ViX2ZvcmRpbWFwZWxhci50ZXN0Lz9oZXJkPXByZXZpZXciO3M6NToicm91dGUiO3M6NToiaW5kZXgiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1771565204),
-('va0GWewmSfewBdhLzUKd1tmAoiPsOav1zvpL0iDc', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Herd/1.24.0 Chrome/120.0.6099.291 Electron/28.2.5 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoibE1aOWU5V1Uza2lGSE5Tazg4M1RVZ0hyTVBDY1o3Z2p6YUY0NFZTaSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDM6Imh0dHBzOi8vd2ViX2ZvcmRpbWFwZWxhci50ZXN0Lz9oZXJkPXByZXZpZXciO3M6NToicm91dGUiO3M6NToiaW5kZXgiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1771565927);
+('nxLRP1rCJw1wh1Pi6dHASy7VPk8eW9Pd1rUeBzfG', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', 'YToyOntzOjY6Il90b2tlbiI7czo0MDoiQ2tYanhITmZCM0xvVU5oc1BMODdTc1hyQ05haXdnSWYwWXlCTEtUSSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1771573183),
+('vFvQ8e9He7rK93yGGQ8mfP8cAglZF7y96OkyaGrj', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoiZU1oQ2I1Qjl0cGJrOVVSa0hla3NQcnM3M2dJRm1OZkk1MFpKNzlLMSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6Mzc6Imh0dHBzOi8vd2ViX2ZvcmRpbWFwZWxhci50ZXN0L3RlbnRhbmciO3M6NToicm91dGUiO3M6NzoidGVudGFuZyI7fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjQ6IjVmZjQyYTQxODA3YmE2N2E1MTJhNTg5ZjUxNmRlMzk1NGI0M2IzOTBmNTZkNjVjMmFjM2JhMzQyZjk3MzFlODkiO3M6ODoiZmlsYW1lbnQiO2E6MDp7fX0=', 1771573437);
 
 -- --------------------------------------------------------
 
@@ -470,7 +469,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'fordimapelarbrawijaya', 'fmapelarub@gmail.com', NULL, '$2y$12$KQXjoJI0Uw3BOXCF.ArdceAp9HwQCwYspaX2Phvqo1AXE8RH0Mj4q', NULL, '2026-02-09 00:02:06', '2026-02-09 00:02:06');
+(1, 'fordimapelarbrawijaya', 'fmapelarub@gmail.com', NULL, '$2y$12$t6bzpLrAAD8cq5ii.xwm1.Hz69QaliExDQcWuGS8oTN6mZ87ApRkC', NULL, '2026-02-09 00:02:06', '2026-02-20 00:38:14');
 
 --
 -- Indexes for dumped tables
@@ -703,7 +702,7 @@ ALTER TABLE `photobooth_frames`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
