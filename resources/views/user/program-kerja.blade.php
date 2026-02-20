@@ -48,16 +48,16 @@
 
         {{-- decoration --}}
         <img src="/images/svg/blueeflower.png" alt=""
-            class="absolute bottom-20 left-20 w-25 h-auto animate-spin [animation-duration:30s]">
+            class="absolute bottom-20 left-20 z-30 w-25 h-auto animate-spin [animation-duration:30s]">
         <img src="/images/svg/blueflower.png" alt=""
-            class="absolute top-40  right-36   w-28   h-auto animate-spin [animation-duration:30s]">
+            class="absolute top-40  right-36 z-30 w-28   h-auto animate-spin [animation-duration:30s]">
         <img src="/images/svg/blueflower.png" alt=""
-            class="absolute bottom-30 max-md:hidden left-56 w-28   h-auto animate-spin [animation-duration:30s]">
+            class="absolute bottom-30 max-md:hidden left-56 w-28 z-30  h-auto animate-spin [animation-duration:30s]">
         <img src="/images/svg/yellowflower.png" alt=""
-            class="absolute bottom-28 right-20 w-30 h-auto animate-spin [animation-duration:15s]">
+            class="absolute bottom-28 right-20 z-30 w-30 h-auto animate-spin [animation-duration:15s]">
 
         {{-- Your Content / Components --}}
-        <div class="relative flex justify-center  h-screen px-40 py-20 max-lg:px-6 max-md:py-6 flex-col text-stone-700  ">
+        <div class="relative flex justify-center  h-screen px-40 py-20 max-lg:px-6 max-md:py-6 flex-col text-stone-700  " data-aos="fade-up" data-aos-duration="2000">
             <h1 class="text-9xl font-bold max-md:text-7xl leading-none mb-5 ">Program Kerja</h1>
             <i class="text-2xl max-md:text-sm bg-[#ECE80B]/50">
                 Temukan Program Kerja kami yang bisa membantu kawan fordi untuk <span class="font-bold ">berkembang</span>

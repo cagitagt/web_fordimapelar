@@ -19,6 +19,8 @@ class AboutCabinetResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?string $navigationGroup = 'Settings';
+
     public static function form(Form $form): Form
     {
         return $form
@@ -64,9 +66,8 @@ class AboutCabinetResource extends Resource
                 Tables\Columns\TextColumn::make('cabinet_year'),
                 Tables\Columns\TextColumn::make('cabinet_ebook'),
                 Tables\Columns\TextColumn::make('chairman_name'),
-                Tables\Columns\TextColumn::make('chairman_photo'),
-                Tables\Columns\TextColumn::make('cabinet_vision'),
-                Tables\Columns\TextColumn::make('cabinet_mission'),
+                Tables\Columns\ImageColumn::make('chairman_photo')
+                ->circular(),
             ])
             ->filters([
                 //

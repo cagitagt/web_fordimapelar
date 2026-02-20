@@ -19,7 +19,14 @@ class ArtworkResource extends Resource
 {
     protected static ?string $model = Artwork::class;
 
+    public static function getEloquentQuery(): Builder
+    {
+        return parent::getEloquentQuery()->with('artworkCategory');
+    }
+
     protected static ?string $navigationIcon = 'heroicon-o-heart';
+
+    protected static ?string $navigationGroup = 'Artwork Management';
 
     public static function form(Form $form): Form
     {
@@ -27,6 +34,7 @@ class ArtworkResource extends Resource
             ->schema([
                 Forms\Components\Select::make('artwork_category_id')
                     ->relationship('artworkCategory','title')
+                    ->searchable()
                     ->required(),
                 Forms\Components\TextInput::make('title')
                     ->live(onBlur: true)
@@ -56,12 +64,11 @@ class ArtworkResource extends Resource
                 Tables\Columns\TextColumn::make('title'),
                 Tables\Columns\TextColumn::make('date'),
                 Tables\Columns\TextColumn::make('author_name'),
-                Tables\Columns\TextColumn::make('slug'),
-                Tables\Columns\ImageColumn::make('thumbnail'),
             ])
             ->filters([
                 Tables\Filters\SelectFilter::make('artwork_category_id')
                     ->relationship('artworkCategory', 'title')
+                    ->searchable()
                     ->label('Select Category'),
             ])
             ->actions([

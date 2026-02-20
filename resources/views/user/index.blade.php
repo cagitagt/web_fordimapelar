@@ -2,13 +2,14 @@
 
 @section('content')
     {{-- hero section --}}
-    <section class="min-h-screen w-full flex items-center justify-center from-[#ECE80B] via-neutral-50/50  to-neutral-50  bg-linear-to-t relative overflow-hidden">
-         <div class="absolute bottom-0 w-full wafee">
-                <div class="wafe" id="wafe1" style="--i:1;"></div>
-                <div class="wafe" id="wafe2" style="--i:2;"></div>
-                <div class="wafe" id="wafe3" style="--i:3;"></div>
-                <div class="wafe" id="wafe4" style="--i:4;"></div>
-            </div>
+    <section
+        class="min-h-screen w-full flex items-center justify-center from-[#ECE80B] via-neutral-50/50  to-neutral-50  bg-linear-to-t relative overflow-hidden">
+        <div class="absolute bottom-0 w-full wafee">
+            <div class="wafe" id="wafe1" style="--i:1;"></div>
+            <div class="wafe" id="wafe2" style="--i:2;"></div>
+            <div class="wafe" id="wafe3" style="--i:3;"></div>
+            <div class="wafe" id="wafe4" style="--i:4;"></div>
+        </div>
 
         <div class="absolute inset-0 bg-white/50 pointer-events-none z-9"></div>
 
@@ -17,7 +18,8 @@
         </div>
         <!-- Page Content -->
         <div class="absolute z-10">
-            <div class="mx-auto max-w-5xl  text-[#100C51] flex flex-col justify-center items-center">
+            <div data-aos="fade-up" data-aos-duration="1500"
+                class="mx-auto max-w-5xl  text-[#100C51] flex flex-col justify-center items-center">
                 <h1 class=" text-5xl font-bold max-md:text-4xl">Fordi Mapelar</h1>
                 <p class="leading-relaxed text-center my-1  font-semibold max-md:text-sm">
                     Forum Studi Mahasiswa Pengembang Penalaran
@@ -40,26 +42,28 @@
             </div>
         </div>
     </section>
-    
+
 
     {{-- Apa itu Fordi Mapelar --}}
     <section
         class="w-full flex justify-center items-center px-32 py-80 max-lg:px-12 max-lg:py-6 relative  bg-linear-to-b from-white to-neutral-50 ">
         <div class="absolute text-[#09182C] max-w-120 max-sm:max-w-40 ">
-            <h1 class="font-bold leading-none max-sm:text-sm mb-5">" Apa itu Fordi Mapelar?"</h1>
-            <p class="font-semibold leading-none text-3xl max-sm:text-lg">
+            <h1 class="font-bold leading-none max-sm:text-sm mb-5" data-aos="fade-up" data-aos-duration="2000">" Apa itu
+                Fordi Mapelar?"</h1>
+            <p class="font-semibold leading-none text-3xl max-sm:text-lg" data-aos="fade-up" data-aos-duration="2000">
                 Unit Kegiatan Mahasiswa yang dinaungi dalam Universitas Brawijaya yang bergerak utamanya di bidang
                 penalaran.
             </p>
         </div>
 
         <div class="absolute right-0 bottom-0">
-            <img src="{{ asset('images/svg/ketum_dec3.svg') }}" alt="Logo" class="object-cover h-auto w-48  max-lg:w-16">
+            <img src="{{ asset('images/svg/ketum_dec3.svg') }}" alt="Logo"
+                class="object-cover h-auto w-48  max-lg:w-16">
     </section>
 
     {{-- quote section --}}
     <section class=" w-full flex justify-center items-center px-40 py-80 max-lg:px-12 max-lg:py-30 ">
-        <div>
+        <div data-aos="fade-up" data-aos-duration="2000">
             <h1 class="md:text-5xl font-bold mb-4 text-xl">“ Nalar Hasta Terusing Budi “</h1>
             <p class=" text-stone-700 font-semibold max-md:text-xs text-end">Bernalar, berkarya, dan menganalisis pikiran
                 merupakan kelanjutan dari budi yang arif. </p>
@@ -120,11 +124,13 @@
                 $cards = [
                     [
                         'title' => 'Collaboration',
-                        'description' => 'Mendorong adanya kerja sama dan kolaborasi baik antar anggota maupun Fordi Mapelar dengan organisasi lain',
+                        'description' =>
+                            'Mendorong adanya kerja sama dan kolaborasi baik antar anggota maupun Fordi Mapelar dengan organisasi lain',
                     ],
                     [
                         'title' => 'Communication',
-                        'description' => 'Membangun dan mengembangkan pola komunikasi yang terbuka dan efektif dalam merangkul berbagai aspirasi dan dalam menjalankan roda organisasi.',
+                        'description' =>
+                            'Membangun dan mengembangkan pola komunikasi yang terbuka dan efektif dalam merangkul berbagai aspirasi dan dalam menjalankan roda organisasi.',
                     ],
                     [
                         'title' => 'Creativity',
@@ -143,27 +149,27 @@
 
             @foreach ($cards as $card)
                 <div class="w-46 h-46 perspective-[1000px] ">
-                <div
-                    class="relative w-full h-full transition-transform duration-700 transform-3d hover:transform-[rotateY(180deg)]  shadow-2xl  rounded-xl bg-white text-stone-700 font-semibold ">
-
-                    {{-- front --}}
                     <div
-                        class="absolute inset-0 flex items-center justify-center rounded-xl  
+                        class="relative w-full h-full transition-transform duration-700 transform-3d hover:transform-[rotateY(180deg)]  shadow-2xl  rounded-xl bg-white text-stone-700 font-semibold ">
+
+                        {{-- front --}}
+                        <div
+                            class="absolute inset-0 flex items-center justify-center rounded-xl  
                 backface-hidden text-[#100C51] text-lg">
-                        {{ $card['title'] }}
-                    </div>
+                            {{ $card['title'] }}
+                        </div>
 
-                    {{-- back --}}
-                    <div
-                        class="absolute inset-0 flex flex-col items-center justify-center rounded-xl  
+                        {{-- back --}}
+                        <div
+                            class="absolute inset-0 flex flex-col items-center justify-center rounded-xl  
                 transform-[rotateY(180deg)] backface-hidden p-5   ">
-                        <h1 class="font-extrabold text-xl mb-2 text-[#100C51] ">{{ $card['title'] }}</h1>
-                        <p class=" leading-none text-sm text-justify">{{ $card['description'] }}</p>
+                            <h1 class="font-extrabold text-xl mb-2 text-[#100C51] ">{{ $card['title'] }}</h1>
+                            <p class=" leading-none text-sm text-justify">{{ $card['description'] }}</p>
+
+                        </div>
 
                     </div>
-
                 </div>
-            </div>
             @endforeach
         </div>
     </section>
@@ -187,7 +193,7 @@
                             class="slide w-full shrink-0 flex flex-col justify-center text-center px-10 py-12 md:p-20 font-medium">
                             <h3 class="text-2xl md:text-lg">
                                 Lambang Fordi Mapelar adalah
-                                
+
                             </h3>
                             <i class="text-[#100c51] text-5xl font-bold">Lingkar Insan Penalaran</i>
                             <p class="mt-6 text-sm text-gray-300">
@@ -296,7 +302,8 @@
     </section>
 
     {{-- Galery --}}
-    <section class="px-20 flex justify-center items-center flex-col  h-screen py-48 my-20 max-lg:px-6 max-lg:py-30  text-stone-700 relative lg:mx-10 overflow-hidden">
+    <section
+        class="px-20 flex justify-center items-center flex-col  h-screen py-48 my-20 max-lg:px-6 max-lg:py-30  text-stone-700 relative lg:mx-10 overflow-hidden">
         <div class="absolute w-96 h-auto left-0 top-0">
             <img src="/images/lt.png" alt="left top" class="object-cover">
         </div>
@@ -313,7 +320,8 @@
         <div class="relative flex flex-col items-center">
             <h1 class="font-bold text-[#100c51] text-7xl ">Our <br>Memories</h1>
             <i class="font-medium">Tumbuh Bersama Fordi Mapelar</i>
-            <button class="mt-5 px-4 py-2 max-lg:bg-[#09182C] lg:hover:bg-[#09182C] text-white rounded-full text-xs font-bold cursor-pointer"><a
+            <button
+                class="mt-5 px-4 py-2 max-lg:bg-[#09182C] lg:hover:bg-[#09182C] text-white rounded-full text-xs font-bold cursor-pointer"><a
                     href="{{ route('galeri') }}">Ketemu! Yuk Cek Galeri Kita</a></button>
         </div>
     </section>
@@ -329,4 +337,36 @@
             menyuarakan kebenaran.
         </p>
     </section>
+
+    {{-- news banner --}}
+    <div class="px-16 py-20 max-md:px-6 max-md:py-6">
+        <h1 class="text-8xl font-extrabold max-md:text-3xl text-[#100C51]  ">
+            Berita Pilihan Kami
+        </h1>
+        <div class=" grid max-lg:grid-cols-1 grid-cols-3 gap-10 my-20">
+            @foreach ($banners as $banner)
+                <a href="{{ route('news.show', $banner->news->slug) }}"
+                    class="bg-white rounded-2xl hover:shadow-2xl shadow-lg overflow-hidden group">
+                    <div class="h-48 w-full overflow-hidden">
+                        <img src="{{ asset('storage/' . $banner->news->thumbnail) }}" alt="{{ $banner->news->title }}"
+                            class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110">
+                    </div>
+
+                    <div class="p-5 flex flex-col gap-2">
+                        <h5 class="text-teal-700 font-semibold leading-none">{{ $banner->news->newsCategory->title }}</h5>
+                        <h2 class="text-lg text-stone-700 font-extrabold">
+                            {{ $banner->news->title }}
+                        </h2>
+                        <p class="text-gray-600 text-sm">
+                            {{ \Carbon\Carbon::parse($banner->news->created_at)->format('d M Y') }}
+                        </p>
+                    </div>
+                </a>
+            @endforeach
+        </div>
+
+        <div class="py-3 border-y border-stone-300 text-center text-stone-500  my-10">
+            <a href="{{ route('berita') }}" class="font-semibold ">Semua berita</a>
+        </div>
+    </div>
 @endsection

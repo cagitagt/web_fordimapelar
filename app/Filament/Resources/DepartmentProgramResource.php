@@ -19,7 +19,15 @@ class DepartmentProgramResource extends Resource
 {
     protected static ?string $model = DepartmentProgram::class;
 
+    public static function getEloquentQuery(): Builder
+{
+    return parent::getEloquentQuery()->with('department');
+}
+
+
     protected static ?string $navigationIcon = 'heroicon-o-building-office-2';
+
+    protected static ?string $navigationGroup = 'Department Management';
 
     public static function form(Form $form): Form
     {
@@ -27,6 +35,7 @@ class DepartmentProgramResource extends Resource
             ->schema([
                 Forms\Components\Select::make('department_id')
                     ->relationship('department','name_dept')
+                    ->searchable()
                     ->required(),
                 Forms\Components\TextInput::make('name_program')
                     ->live(onBlur: true)
@@ -50,11 +59,11 @@ class DepartmentProgramResource extends Resource
                 Tables\Columns\TextColumn::make('department.name_dept'),
                 Tables\Columns\TextColumn::make('name_program'),
                 Tables\Columns\TextColumn::make('time_label'),
-                Tables\Columns\ImageColumn::make('image'),
             ])
             ->filters([
                 Tables\Filters\SelectFilter::make('department_id')
                     ->relationship('department', 'name_dept')
+                    ->searchable()
                     ->label('Select Category'),
             ])
             ->actions([

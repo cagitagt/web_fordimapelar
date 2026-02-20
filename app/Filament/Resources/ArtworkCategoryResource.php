@@ -21,6 +21,9 @@ class ArtworkCategoryResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-tag';
 
+    protected static ?string $navigationGroup = 'Artwork Management';
+
+
     public static function form(Form $form): Form
     {
         return $form

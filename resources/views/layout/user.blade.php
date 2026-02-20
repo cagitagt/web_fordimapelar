@@ -1,11 +1,13 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <link rel="icon" href="{{ asset('favicon.png') }}">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fordi Mapelar | UB</title>
-  @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="icon" href="{{ asset('favicon.png') }}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Fordi Mapelar | UB</title>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body class=" bg-neutral-50  w-full min-h-screen font-sans">
@@ -16,5 +18,10 @@
     </main>
 
     @include('partials.footer')
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>

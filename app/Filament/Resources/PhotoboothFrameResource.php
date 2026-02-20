@@ -19,6 +19,8 @@ class PhotoboothFrameResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-camera';
 
+    protected static ?string $navigationGroup = 'Media Management';
+
     public static function form(Form $form): Form
     {
         return $form

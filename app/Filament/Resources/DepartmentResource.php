@@ -21,6 +21,8 @@ class DepartmentResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-tag';
 
+    protected static ?string $navigationGroup = 'Department Management';
+
     public static function form(Form $form): Form
     {
         return $form
@@ -40,7 +42,6 @@ class DepartmentResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name_dept'),
-                Tables\Columns\ImageColumn::make('image'),
             ])
             ->filters([
                 //

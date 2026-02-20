@@ -7,6 +7,7 @@ use App\Http\Controllers\AboutCabinetController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProgramsController;
 use App\Http\Controllers\ArtworkController;
+use App\Http\Controllers\LandingController;  
 use Illuminate\Support\Facades\Route;
 
 Route::get('/welcome', function () {
@@ -19,9 +20,7 @@ Route::get('/trial', function () {
 
 Route::get('/news/{slug}', [NewsController::class, 'show'])->name('news.show');
 
-Route::get('/', function () {
-    return view('user.index');
-})->name('index');
+Route::get('/', [LandingController::class, 'index'])->name('index');
 
 Route::get('/tentang', [AboutCabinetController::class, 'index'])->name('tentang');
 

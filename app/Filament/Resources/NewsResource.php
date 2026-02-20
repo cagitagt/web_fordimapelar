@@ -19,7 +19,15 @@ class NewsResource extends Resource
 {
     protected static ?string $model = News::class;
 
+    public static function getEloquentQuery(): Builder
+{
+    return parent::getEloquentQuery()->with('newsCategory');
+}
+
+
     protected static ?string $navigationIcon = 'heroicon-o-newspaper';
+
+    protected static ?string $navigationGroup = 'Content Management';
 
     public static function form(Form $form): Form
     {
@@ -27,6 +35,7 @@ class NewsResource extends Resource
             ->schema([
                 Forms\Components\Select::make('news_category_id')
                     ->relationship('newsCategory','title')
+                    ->searchable()
                     ->required(),
                 Forms\Components\TextInput::make('title')
                     ->live(onBlur: true)
@@ -53,12 +62,13 @@ class NewsResource extends Resource
                 Tables\Columns\TextColumn::make('newsCategory.title'),
                 Tables\Columns\TextColumn::make('title'),
                 Tables\Columns\TextColumn::make('author_name'),
-                Tables\Columns\TextColumn::make('slug'),
-                Tables\Columns\ImageColumn::make('thumbnail'),
+                Tables\Columns\ImageColumn::make('thumbnail')
+                    ->circular(),
             ])
             ->filters([
                 Tables\Filters\SelectFilter::make('news_category_id')
                     ->relationship('newsCategory', 'title')
+                    ->searchable()
                     ->label('Select Category'),
             ])
             ->actions([

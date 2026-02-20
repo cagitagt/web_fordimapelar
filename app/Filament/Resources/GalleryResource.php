@@ -19,6 +19,9 @@ class GalleryResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-photo';
 
+    protected static ?string $navigationGroup = 'Media Management';
+
+
     public static function form(Form $form): Form
     {
         return $form
@@ -38,9 +41,11 @@ class GalleryResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('image'),
+                Tables\Columns\ImageColumn::make('image')
+                ->circular(),
                 Tables\Columns\TextColumn::make('title'),
-                Tables\Columns\TextColumn::make('description'),
+                Tables\Columns\TextColumn::make('description')
+                ->limit(10),
             ])
             ->filters([
                 // 

@@ -26,8 +26,8 @@
 
                 {{-- content inside paper --}}
                 <div
-                    class="relative flex justify-center items-center h-full  flex-col text-stone-700  px-6 lg:px-20  text-center ">
-                    <span class="uppercase tracking-widest text-sm font-bold text-[#100C51]">
+                    class="relative flex justify-center items-center h-full  flex-col text-stone-700  px-6 lg:px-20  text-center " data-aos="fade-up" data-aos-duration="2000">
+                    <span  class="uppercase tracking-widest text-sm font-bold text-[#100C51]">
                         FORDI MAPELAR {{ $aboutcabinet->cabinet_year }}
                     </span>
 
@@ -176,22 +176,24 @@
                     [
                         'BPI' => 'Dewan Pertimbangan',
                         'description' =>
-                            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto temporibus delectus dolor facilis, ab molestiae accusamus recusandae expedita animi, dolorum, ',
+                            'Dewan pertimbangan diputuskan dalam Musyawarah Anggota Fordi Mapelar untuk membantu dan memberikan saran bagi kepengurusan yang tengah berjalan. Dipilih dari BPH Fordi Mapelar UB sebelumnya, tentunya dewan pertimbangan telah berpengalaman dan kompeten untuk membimbing jalannya organisasi. ',
                     ],
                     [
                         'BPI' => 'Ketua Umum',
                         'description' =>
-                            'Lorem ipsum dolor sit amet consectetur adipisi Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, reprehenderit. Magni id corporis repudiandae, delectus velit, possimus repellat necessitatibus expedita voluptatem sunt omnis? ',
+                            'Sebagai "kapten" dari Fordi Mapelar UB 2025 yang sedang mengudara, tentunya ketua umum bertugas untuk menavigasi dan mengarahkan haluan organisasi, mengawasi pengurus secara struktural, dan mengawasi pelaksanaan proker. Ketua umum juga bertanggung jawab untuk menjadi representasi atau "wajah" dari Fordi Mapelar UB sehingga harus mampu memberi teladan bagi pengurus dan juga anggota. 
+ ',
                     ],
                     [
                         'BPI' => 'Sekretaris Umum',
                         'description' =>
-                            'Lorem ipsum dolor sit amet consectetur adipisi Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, reprehenderit. Magni id corporis repudiandae, delectus velit, possimus repellat ',
+                            'Sekretaris bertanggungjawab untuk keperluan administratif organisasi seperti penyusunan proposal dan laporan pertanggungjawaban. Selain itu, sekretaris juga memiliki wewenang untuk mengatur dan mengarsipkan dokumen serta mengatur surat masuk dan surat keluar. Dengan kata lain, sekretaris memegang peran esensial untuk kearsipan Fordi Mapelar UB.
+ ',
                     ],
                     [
                         'BPI' => 'Bendahara Umum',
                         'description' =>
-                            'Lorem ipsum dolor sit amet consectetur adipisi Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, reprehenderit. Magni id corporis repudiandae, delectus velit, possimus repellat ',
+                            'Bendahara bertanggungjawab untuk mengatur cashflow dari Fordi Mapelar UB. Suatu organisasi tentunya membutuhkan dana untuk menjalankan program kerja unggulannya. Oleh karena itu, bendahara memegang peranan esensial dalam keuangan organisasi sebagai pengolah sumber daya keuangan. ',
                     ],
                 ];
             @endphp

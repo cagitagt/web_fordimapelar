@@ -17,7 +17,15 @@ class BannerResource extends Resource
 {
     protected static ?string $model = Banner::class;
 
+    public static function getEloquentQuery(): Builder
+{
+    return parent::getEloquentQuery()->with('news');
+}
+
+
     protected static ?string $navigationIcon = 'heroicon-o-bookmark-square';
+
+    protected static ?string $navigationGroup = 'Content Management';
 
     public static function form(Form $form): Form
     {

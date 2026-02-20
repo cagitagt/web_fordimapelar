@@ -46,7 +46,7 @@
         ">
         </div>
 
-        <div class="relative flex justify-center px-16  max-md:px-6 flex-col items-center min-h-screen  text-stone-700  ">
+        <div class="relative flex justify-center px-16  max-md:px-6 flex-col items-center min-h-screen  text-stone-700  " data-aos="fade-up" data-aos-duration="2000">
             <h1 class="text-8xl font-bold max-md:text-3xl  mb-2 ">Karya Kawan Fordi</h1>
             <p class=" max-lg:text-sm text-center max-w-3xl">
                 Cerita, proses, dan karya yang tumbuh bersama Kawan Fordi.

@@ -5,7 +5,7 @@
         <div
             class="flex flex-col justify-center items-center min-h-110 w-full my-10 text-stone-700 px-20 py-20 max-md:px-12 max-md:py-16 relative ">
 
-            <div class="relative  rounded-4xl p-5">
+            <div class="relative  rounded-4xl p-5" data-aos="fade-up" data-aos-duration="2000">
                 <h1 class="text-6xl font-bold max-md:text-3xl mb-2 text-center">
                     Layanan & Komunikasi
                 </h1>
