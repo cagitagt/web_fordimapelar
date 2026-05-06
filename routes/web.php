@@ -30,14 +30,9 @@ Route::get('/karya', [ArtworkController::class, 'index'])->name('karya');
 
 Route::get('/karya/{slug}', [ArtworkController::class, 'show'])->name('artwork.show');
 
-Route::get('/karyahh', function () {
-    return view('user.karyahhh');
-})->name('karyahh');
-
 Route::get('/program-kerja', [ProgramsController::class, 'index' ])->name('program-kerja');
 
 Route::get('/layanan', [ExternalSettingController::class, 'index'])->name('layanan');
-
 
 Route::get('/galeri', [GalleryController::class, 'index'])->name('galeri');
 
