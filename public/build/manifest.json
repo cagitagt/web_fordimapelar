@@ -17,5 +17,11 @@
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true
+  },
+  "resources/js/photobooth.js": {
+    "file": "assets/photobooth-CpXnhctd.js",
+    "name": "photobooth",
+    "src": "resources/js/photobooth.js",
+    "isEntry": true
   }
 }
