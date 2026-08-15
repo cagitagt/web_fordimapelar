@@ -18,6 +18,10 @@ Route::get('/trial', function () {
     return view('home');
 });
 
+Route::fallback(function() {
+    return view('404');
+});
+
 Route::get('/news/{slug}', [NewsController::class, 'show'])->name('news.show');
 
 Route::get('/', [LandingController::class, 'index'])->name('index');

@@ -1,16 +1,20 @@
 @extends('layout.user')
 @section('content')
     {{-- hero --}}
-    <section class="pt-20  bg-linear-to-b from-[#0595dd9e] via-neutral-50 to-neutral-50">
+    <section class="pt-32 pb-10 bg-linear-to-b from-[#0595dd9e] h-screen via-neutral-50 to-neutral-50">
         <div
-            class="flex flex-col justify-center items-center min-h-110 w-full my-10 text-stone-700 px-20 py-20 max-md:px-12 max-md:py-16 relative ">
+            class="flex flex-col justify-center items-center min-h-72 w-full my-6 text-stone-700 px-6 md:px-20 py-16 max-md:py-10 relative">
 
-            <div class="relative  rounded-4xl p-5" data-aos="fade-up" data-aos-duration="2000">
-                <h1 class="text-6xl font-bold max-md:text-3xl mb-2 text-center">
+            <div class="relative rounded-4xl p-5 text-center" data-aos="fade-up" data-aos-duration="2000">
+                <span class="uppercase tracking-[0.25em] text-xs font-semibold text-[#0595DD]/70 mb-4 block">
+                    Fordi Mapelar
+                </span>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 text-stone-800 tracking-tight">
                     Layanan & Komunikasi
                 </h1>
-                <p class="text-lg max-md:text-sm text-center max-w-180">
-                    Jelajahi berbagai layanan yang kami sediakan untuk mendukung komunikasi dari internal maupun eksternal  UKM Fordi Mapelar
+                <p class="text-sm md:text-lg text-stone-500 max-w-xl mx-auto leading-relaxed">
+                    Jelajahi berbagai layanan yang kami sediakan untuk mendukung komunikasi dari internal maupun
+                    eksternal UKM Fordi Mapelar
                 </p>
             </div>
 
@@ -18,31 +22,31 @@
     </section>
 
     {{-- layanan --}}
-    <section class="px-40 py-20 max-lg:px-6 max-md:py-10 flex flex-col gap-20 mt-5 mb-10  text-stone-700">
+    <section class="px-6 md:px-20 lg:px-40 py-16 md:py-24 flex flex-col gap-20 text-stone-700">
 
         <!-- ADVOCACY -->
-        <div class="flex flex-col gap-20">
-            <i class="text-3xl text-center max-md:text-xl font-semibold text-white bg-[#0595ddea] rounded-t-2xl">
+        <div class="flex flex-col gap-10">
+            <h2 class="text-2xl md:text-3xl text-center font-bold text-[#0595DD]">
                 Advokasi
-            </i>
+            </h2>
 
             <!-- wrapper -->
-            <div class="grid grid-cols-3 max-md:grid-cols-1 gap-10 min-h-40">
+            <div class="grid grid-cols-3 max-md:grid-cols-1 gap-6 min-h-40">
 
                 <!-- Visitasi, Kolaborasi, dan Undangan -->
                 <div
-                    class="rounded-xl border border-white hover:border-[#0595dd9e] flex flex-col justify-center items-center p-8">
-                    <div class="">
-                        <img src="/images/svg/invitation.svg" alt="" class="mb-5">
-                        <h1 class="font-bold mb-2  leading-none">Visitasi, Kolaborasi, dan Undangan</h1>
-                        <p class="text-xs">
-                            Pengajuan Kerjasama untuk <span class="font-bold">Internal maupun Eksternal Universitas
-                                Brawijaya</span>
+                    class="rounded-2xl border border-stone-200 bg-white shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between items-center p-8 text-center">
+                    <div>
+                        <img src="/images/svg/invitation.svg" alt="" class="mb-5 mx-auto">
+                        <h1 class="font-bold mb-2 leading-snug text-stone-800">Visitasi, Kolaborasi, dan Undangan</h1>
+                        <p class="text-xs text-stone-500">
+                            Pengajuan Kerjasama untuk <span class="font-semibold text-stone-700">Internal maupun
+                                Eksternal Universitas Brawijaya</span>
                         </p>
                     </div>
 
                     <a href="{{ $external_setting->invitation_url }}" target="_blank" rel="noopener noreferrer"
-                        class="inline-block text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e] cursor-pointer">
+                        class="inline-block text-sm mt-10 py-2 px-6 rounded-full text-white font-semibold tracking-wide bg-[#0595DD] transition-all duration-300 hover:bg-[#0480c0] hover:shadow-md">
                         Klik di sini
                     </a>
 
@@ -50,24 +54,23 @@
 
                 <!-- narahubung -->
                 <div
-                    class="md:col-span-2 max-md:col-span-1 rounded-xl border border-white hover:border-[#0595dd9e] p-8 flex flex-col justify-between items-center">
-                    <div class="">
-                        <img src="/images/svg/narahubung.svg" alt="" class="mb-5">
-                        <h1 class="font-bold text-lg mb-2">Narahubung</h1>
-                        <p class="text-xs"> Hubungi Kami di Nomor Ini untuk
-                            Pengajuan dan Konfirmasi Kerjasama baik dari <span class="font-bold">Internal maupun Eksternal
-                                Universitas
-                                Brawijaya</span>
+                    class="md:col-span-2 max-md:col-span-1 rounded-2xl border border-stone-200 bg-white shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 p-8 flex flex-col justify-between items-center text-center">
+                    <div>
+                        <img src="/images/svg/narahubung.svg" alt="" class="mb-5 mx-auto">
+                        <h1 class="font-bold text-lg mb-2 text-stone-800">Narahubung</h1>
+                        <p class="text-xs text-stone-500"> Hubungi Kami di Nomor Ini untuk
+                            Pengajuan dan Konfirmasi Kerjasama baik dari <span class="font-semibold text-stone-700">Internal
+                                maupun Eksternal Universitas Brawijaya</span>
                         </p>
                     </div>
 
-                    <div class=" flex gap-2.5">
+                    <div class="flex gap-3 mt-10 flex-wrap justify-center">
                         <a href="{{ $external_setting->contact1_link }}" target="_blank" rel="noopener noreferrer"
-                            class="text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e] cursor-pointer">
+                            class="text-sm py-2 px-6 rounded-full text-white font-semibold tracking-wide bg-[#0595DD] transition-all duration-300 hover:bg-[#0480c0] hover:shadow-md">
                             {{ $external_setting->contact1_name }}
                         </a>
                         <a href="{{ $external_setting->contact2_link }}" target="_blank" rel="noopener noreferrer"
-                            class="text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e] cursor-pointer">
+                            class="text-sm py-2 px-6 rounded-full text-white font-semibold tracking-wide bg-[#0595DD] transition-all duration-300 hover:bg-[#0480c0] hover:shadow-md">
                             {{ $external_setting->contact2_name }}
                         </a>
                     </div>
@@ -79,61 +82,60 @@
         </div>
 
         <!-- PARTNERSHIP -->
-        <div class="flex flex-col gap-20">
-            <i class="text-3xl text-center max-md:text-xl font-semibold text-white bg-[#0595ddea] rounded-t-2xl ">
+        <div class="flex flex-col gap-10">
+            <h2 class="text-2xl md:text-3xl text-center font-bold text-[#0595DD]">
                 Kerjasama & Kemitraan Publikasi
-            </i>
+            </h2>
 
             <!-- wrapper -->
-            <div class="grid max-lg:grid-cols-1 grid-cols-3 gap-10  min-h-40">
+            <div class="grid max-lg:grid-cols-1 grid-cols-3 gap-6 min-h-40">
 
                 <div
-                    class=" rounded-xl border border-white hover:border-[#0595dd9e]
-                  flex flex-col justify-between items-center p-8">
-                    <div class="">
-                        <img src="/images/svg/internal.svg" alt="" class="mb-5 ">
-                        <h1 class="font-bold text-lg mb-2">Mitra Internal</h1>
-                        <p class="text-xs">
-                            Syarat Pengajuan Kerjasama untuk <span class="font-bold">Internal Universitas Brawijaya</span>
+                    class="rounded-2xl border border-stone-200 bg-white shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between items-center p-8 text-center">
+                    <div>
+                        <img src="/images/svg/internal.svg" alt="" class="mb-5 mx-auto">
+                        <h1 class="font-bold text-lg mb-2 text-stone-800">Mitra Internal</h1>
+                        <p class="text-xs text-stone-500">
+                            Syarat Pengajuan Kerjasama untuk <span class="font-semibold text-stone-700">Internal
+                                Universitas Brawijaya</span>
                         </p>
                     </div>
                     <a href="{{ $external_setting->internal_terms_url }}" target="_blank" rel="noopener noreferrer"
-                        class="text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e] cursor-pointer">
+                        class="text-sm mt-10 py-2 px-6 rounded-full text-white font-semibold tracking-wide bg-[#0595DD] transition-all duration-300 hover:bg-[#0480c0] hover:shadow-md">
                         Klik di sini
                     </a>
 
                 </div>
 
                 <div
-                    class=" rounded-xl border border-white hover:border-[#0595dd9e]
-                  flex flex-col justify-between items-center p-7 ">
-                    <div class="">
-                        <img src="/images/svg/eksternal.svg" alt="" class="mb-5 ">
-                        <h1 class="font-bold text-lg mb-2">Mitra Eksternal</h1>
-                        <p class="text-xs">
-                            Syarat Pengajuan Kerjasama untuk <span class="font-bold">Eksternal Universitas Brawijaya</span>
+                    class="rounded-2xl border border-stone-200 bg-white shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between items-center p-8 text-center">
+                    <div>
+                        <img src="/images/svg/eksternal.svg" alt="" class="mb-5 mx-auto">
+                        <h1 class="font-bold text-lg mb-2 text-stone-800">Mitra Eksternal</h1>
+                        <p class="text-xs text-stone-500">
+                            Syarat Pengajuan Kerjasama untuk <span class="font-semibold text-stone-700">Eksternal
+                                Universitas Brawijaya</span>
                         </p>
                     </div>
 
                     <a href="{{ $external_setting->external_terms_url }}" target="_blank" rel="noopener noreferrer"
-                        class="text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e] cursor-pointer">
+                        class="text-sm mt-10 py-2 px-6 rounded-full text-white font-semibold tracking-wide bg-[#0595DD] transition-all duration-300 hover:bg-[#0480c0] hover:shadow-md">
                         Klik di sini
                     </a>
                 </div>
 
                 <div
-                    class=" rounded-xl border border-white hover:border-[#0595dd9e]
-                  flex flex-col justify-between items-center p-8">
-                    <div class="">
-                        <img src="/images/svg/form.svg" alt="" class="mb-5 ">
-                        <h1 class="font-bold text-lg mb-2">Form Pengajuan Publikasi</h1>
-                        <p class="text-xs">
-                            Pengajuan Kerjasama publikasi <br> <i class="font-semibold">*harap dibaca ketentuan terlebih
-                                dahulu</i> </span>
+                    class="rounded-2xl border border-stone-200 bg-white shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between items-center p-8 text-center">
+                    <div>
+                        <img src="/images/svg/form.svg" alt="" class="mb-5 mx-auto">
+                        <h1 class="font-bold text-lg mb-2 text-stone-800">Form Pengajuan Publikasi</h1>
+                        <p class="text-xs text-stone-500">
+                            Pengajuan Kerjasama publikasi <br>
+                            <i class="font-semibold not-italic">*harap dibaca ketentuan terlebih dahulu</i>
                         </p>
                     </div>
                     <a href="{{ $external_setting->terms_form_url }}" target="_blank" rel="noopener noreferrer"
-                        class="text-sm mt-14 py-2 px-5 rounded-full text-white font-bold bg-[#0595dd9e] cursor-pointer">
+                        class="text-sm mt-10 py-2 px-6 rounded-full text-white font-semibold tracking-wide bg-[#0595DD] transition-all duration-300 hover:bg-[#0480c0] hover:shadow-md">
                         Klik di sini
                     </a>
 
@@ -143,9 +145,10 @@
     </section>
 
     {{-- faq --}}
-    <section id="faq" class="bg-gray-50 py-20 max-lg:px-6 text-[#0595ddea]">
-        <div class="max-w-4xl mx-auto ">
-            <h2 class="text-4xl font-bold text-center mb-16">Frequently Asked Questions</h2>
+    <section id="faq" class="bg-neutral-50 py-20 px-6 md:px-6 text-[#0595ddea]">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-stone-800">Frequently Asked Questions</h2>
+            <p class="text-center text-sm text-stone-500 mb-14">Pertanyaan yang sering diajukan seputar Fordi Mapelar</p>
 
             @php
                 $faqs = [
@@ -200,15 +203,16 @@
                 ];
             @endphp
 
-            <div class="space-y-4">
+            <div class="space-y-3">
                 @foreach ($faqs as $faq)
-                    <div class="border rounded-lg bg-white shadow overflow-hidden">
+                    <div class="border border-stone-200 rounded-2xl bg-white shadow-sm overflow-hidden">
                         <button
-                            class="accordion w-full text-left px-4 py-3 font-semibold text-lg flex justify-between items-center">
-                            {{ $faq['question'] }} <span class="icon transition-transform duration-300">+</span>
+                            class="accordion w-full text-left px-6 py-4 font-semibold text-base md:text-lg flex justify-between items-center gap-4">
+                            {{ $faq['question'] }}
+                            <span class="icon transition-transform duration-300 text-[#0595DD] text-xl shrink-0">+</span>
                         </button>
-                        <div class="panel max-h-0 overflow-hidden px-4 text-gray-700 transition-all duration-500">
-                            <p class="py-3">{{ $faq['answer'] }}</p>
+                        <div class="panel max-h-0 overflow-hidden px-6 text-stone-500 transition-all duration-500">
+                            <p class="py-3 leading-relaxed">{{ $faq['answer'] }}</p>
                         </div>
                     </div>
                 @endforeach
