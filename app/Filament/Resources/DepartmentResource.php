@@ -29,10 +29,10 @@ class DepartmentResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('name_dept')
                     ->required(),
+                Forms\Components\Textarea::make('description')
+                    ->required(),
                 Forms\Components\FileUpload::make('image')
                     ->image()
-                    ->required(),
-                Forms\Components\Textarea::make('description')
                     ->required(),
             ]);
     }

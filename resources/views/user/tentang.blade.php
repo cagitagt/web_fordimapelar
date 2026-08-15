@@ -3,8 +3,8 @@
 @section('content')
     {{-- hero section --}}
     <section>
-        <div class="lg:h-screen h-250 w-full  relative ">
-
+        <div class="lg:h-screen h-[65vh] w-full relative">
+ 
             {{-- paper top and bottom --}}
             <div class="absolute z-10 bottom-0 w-full h-auto">
                 <img src="/images/paper.png" alt="" class="w-full h-full object-contain">
@@ -12,57 +12,59 @@
             <div class="absolute z-10 top-0 rotate-180 w-full h-auto">
                 <img src="/images/paper.png" alt="" class="w-full h-full object-contain">
             </div>
-
+ 
             {{-- background color --}}
-            <div class="absolute inset-0 z-0"
+            <div class="absolute inset-0 z-0 overflow-hidden"
                 style="
-                        background-color:  #d1d7e4;
+                        background-color: #e7eaf1;
                         background-image:
-                        linear-gradient(to right, #0f0c511b 1px, transparent 1px),
-                        linear-gradient(to bottom, #0f0c511b 1px, transparent 1px);
-                        background-size: 40px 40px;
+                        radial-gradient(#100c5112 1px, transparent 1px);
+                        background-size: 26px 26px;
                     ">
-
-
+ 
+                {{-- soft gradient glow --}}
+                <div class="absolute -top-24 -right-24 w-96 h-96 bg-[#0595DD]/10 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-[#100C51]/10 rounded-full blur-3xl"></div>
+ 
                 {{-- content inside paper --}}
                 <div
-                    class="relative flex justify-center items-center h-full  flex-col text-stone-700  px-6 lg:px-20  text-center " data-aos="fade-up" data-aos-duration="2000">
-                    <span  class="uppercase tracking-widest text-sm font-bold text-[#100C51]">
-                        FORDI MAPELAR {{ $aboutcabinet->cabinet_year }}
+                    class="relative flex justify-center items-center h-full flex-col text-stone-700 px-6 lg:px-20 text-center"
+                    data-aos="fade-up" data-aos-duration="2000">
+ 
+                    <span class="uppercase tracking-[0.25em] text-xs font-semibold text-[#100C51]/70 mb-4">
+                        Fordi Mapelar {{ $aboutcabinet->cabinet_year }}
                     </span>
-
-                    <h1 class="font-extrabold text-5xl leading-tight max-md:text-4xl">
+ 
+                    <h1 class="font-bold text-4xl md:text-6xl leading-tight text-stone-800 tracking-tight">
                         Kabinet <span class="text-[#100C51]">{{ $aboutcabinet->cabinet_name }}</span>
                     </h1>
-
-                    <p class="max-w-2xl font-medium text-lg ">
+ 
+                    <p class="max-w-xl font-normal text-base md:text-lg text-stone-500 mt-5">
                         Mengenal lebih dekat visi, misi, dan semangat pergerakan UKM Fordi Mapelar.
                     </p>
-
-                    <div class="flex gap-3 mt-5  items-center justify-center flex-wrap">
+ 
+                    <div class="flex gap-4 mt-9 items-center justify-center flex-wrap">
                         <a href="{{ $aboutcabinet->cabinet_ebook }}" target="_blank" rel="noopener noreferrer"
-                            class=" px-6 py-2 bg-[#100C51] text-white rounded-full font-bold cursor-pointer">
+                            class="px-7 py-2.5 bg-[#100C51] text-white rounded-full text-sm font-semibold tracking-wide transition-all duration-300 hover:bg-[#1a154f] hover:shadow-lg hover:-translate-y-0.5">
                             E-Booklet
                         </a>
-                        <button
-                            class=" px-6 py-2 bg-white border-stone-700 rounded-full font-bold cursor-pointer  border"><a
-                                href="{{ route('program-kerja') }}">Program Kerja</a>
-                        </button>
+                        <a href="{{ route('program-kerja') }}"
+                            class="px-7 py-2.5 bg-white border border-stone-200 rounded-full text-sm font-semibold tracking-wide text-stone-700 transition-all duration-300 hover:border-[#100C51] hover:text-[#100C51]">
+                            Program Kerja
+                        </a>
                     </div>
                 </div>
-
-
+ 
             </div>
             {{-- content end inside paper --}}
-
-        </div>
+ 
         </div>
     </section>
 
     {{-- company profile/image --}}
     <section class=" px-40 py-20 max-lg:px-6 max-md:py-6 bg-linear-to-b from-white to-neutral-50 ">
         <div
-            class="relative min-h-120 w-full rounded-3xl overflow-hidden shadow-xl border-[#100C51] border-4 bg-[#100C51] flex items-center justify-center">
+            class="relative min-h-130 w-full rounded-3xl overflow-hidden shadow-xl border-[#100C51] border-4 bg-[#100C51] flex items-center justify-center">
 
 
             @if (!empty($aboutcabinet?->company_profile_link))
@@ -87,12 +89,12 @@
     {{-- narasi kabinet --}}
     <section class=" px-40 py-20 max-lg:px-6 max-md:py-6">
         <div class="max-w-4xl mx-auto">
-            <div class=" bg-white p-6 rounded-3xl ">
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-stone-100">
 
-                <h1 class="font-bold text-4xl  mb-5 text-stone-700"><span class="text-[#100C51]">Narasi Besar</span> Kabinet
+                <h1 class="font-bold text-4xl mb-5 text-stone-700"><span class="text-[#100C51]">Narasi Besar</span> Kabinet
                 </h1>
 
-                <p class="text-gray-700   text-justify ">
+                <p class="text-gray-600 leading-relaxed text-justify">
                     {!! $aboutcabinet->cabinet_narrative !!}
                 </p>
             </div>
@@ -100,29 +102,45 @@
     </section>
 
     {{-- sambutan ketua umum --}}
-    <section class="px-40 py-20 max-lg:px-6 max-md:py-6 relative">
-        <h1 class=" relative font-bold text-4xl mb-10 text-stone-700">Sambutan <span class="text-[#100C51]">Ketua
-                Umum</span></h1>
-        <div class="grid max-md:grid-cols-1 grid-cols-2 gap-5  text-center relative">
-            <div class=" flex items-center justify-center flex-col gap-5 text-white p-10 relative">
-                <div class="bg-white rounded-3xl  h-60  w-56  relative">
-                    <img src="{{ asset('storage/' . $aboutcabinet->chairman_photo) }}" alt="ketua umum"
-                        class="w-full h-full absolute object-cover rounded-3xl border-8 border-white z-10">
+    <section class="px-6 md:px-20 lg:px-40 py-20 md:py-32 relative overflow-hidden">
+        <h1 class="relative font-bold text-3xl md:text-4xl mb-16 text-stone-700 text-center md:text-left">
+            Sambutan <span class="text-[#100C51]">Ketua Umum</span>
+        </h1>
 
-                    {{-- decor --}}
-                    <img src="/images/svg/ketum_dec1.svg" alt=""
-                        class="absolute -rotate-30    -left-32 -bottom-5  z-0 w-96 h-auto">
-                    <img src="/images/svg/ketum_dec2.svg" alt="" class="absolute -right-5 -top-5 z-20  w-20 h-auto">
-                    <img src="/images/svg/ketum_dec3.svg" alt=""
-                        class="absolute -bottom-5 -right-12 h-auto w-24   z-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-10 items-center relative">
 
+            {{-- foto ketua umum --}}
+            <div class="relative flex items-center justify-center">
+                {{-- decorative diamond pattern --}}
+                <div class="absolute -left-4 md:-left-10 top-1/2 -translate-y-1/2 -z-10 opacity-90 hidden sm:grid grid-cols-3 gap-1.5 rotate-12">
+                    @for ($i = 0; $i < 9; $i++)
+                        <span
+                            class="w-8 h-8 md:w-10 md:h-10 rounded-md {{ $i % 2 === 0 ? 'bg-[#100C51]' : 'bg-[#0595DD]' }} {{ $i % 3 === 1 ? 'opacity-40' : '' }}"></span>
+                    @endfor
                 </div>
-                <h5 class="py-1 bg-white px-5 rounded-full font-bold  text-[#100C51] relative">
-                    {{ $aboutcabinet->chairman_name }}
-                </h5>
+
+                <div class="relative">
+                    <div class="bg-white rounded-3xl h-72 w-64 md:h-80 md:w-72 relative shadow-xl">
+                        <img src="{{ asset('storage/' . $aboutcabinet->chairman_photo) }}" alt="ketua umum"
+                            class="w-full h-full absolute object-cover rounded-3xl border-8 border-white z-10">
+
+                        {{-- decor --}}
+                        <img src="/images/svg/ketum_dec2.svg" alt=""
+                            class="absolute -right-4 -top-4 z-20 w-14 h-auto opacity-90">
+                        <img src="/images/svg/ketum_dec3.svg" alt=""
+                            class="absolute -bottom-4 -right-6 h-auto w-16 z-20 opacity-90">
+                    </div>
+
+                    <h5 class="mt-6 py-2 bg-white shadow-md px-6 rounded-full font-bold text-[#100C51] text-center w-fit mx-auto">
+                        {{ $aboutcabinet->chairman_name }}
+                    </h5>
+                </div>
             </div>
-            <div class="flex items-center justify-center flex-col gap-5 text-[#100C51] p-10 text-justify">
-                <p class="leading-relaxed">
+
+            {{-- narasi ketua umum --}}
+            <div class="flex flex-col gap-4 text-[#100C51] text-center md:text-left">
+                <span class="font-bold text-2xl">Halo</span>
+                <p class="leading-relaxed text-stone-600 italic text-justify">
                     {!! $aboutcabinet->chairman_narrative !!}
                 </p>
             </div>
@@ -133,17 +151,18 @@
     {{-- visi misi --}}
     <section class="px-40 py-20 max-lg:px-6 max-md:py-6">
         <h1 class="font-bold text-4xl mb-10 text-stone-700"> <span class="text-[#100C51]">Visi dan Misi</span> Kabinet</h1>
-        <div class="grid max-md:grid-cols-1 grid-cols-2 gap-5 text-center">
-            <div class="bg-[#100C51] p-16 text-white flex items-center justify-center flex-col gap-5 border rounded-4xl">
+        <div class="grid max-md:grid-cols-1 grid-cols-2 gap-6 text-center">
+            <div class="bg-[#100C51] p-16 text-white flex items-center justify-center flex-col gap-5 rounded-3xl shadow-md">
                 <h1 class="font-bold text-2xl">Visi</h1>
-                <i>
+                <i class="leading-relaxed">
                     {!! $aboutcabinet->cabinet_vision !!}
                 </i>
             </div>
             <div class="text-[#100C51] p-10 flex flex-col gap-5 text-justify">
                 <h1 class="font-bold text-2xl">Misi</h1>
-                <p>
+                <p class="leading-relaxed">
                     {!! $aboutcabinet->cabinet_mission !!}
+                </p>
             </div>
         </div>
     </section>
@@ -153,7 +172,7 @@
         <h1 class="font-bold text-4xl mb-10 text-stone-700"> <span class="text-[#100C51]"> Struktur </span>Kabinet</h1>
 
         <div class="relative w-full h-150 max-md:h-96">
-            <div class="my-20 relative bg-[#100C51] border-[#100C51] border-4 rounded-2xl w-full h-150  max-md:h-96">
+            <div class="my-20 relative bg-[#100C51] rounded-2xl w-full h-150 max-md:h-96 shadow-md overflow-hidden">
                 <img src="{{ asset('storage/' . $aboutcabinet->cabinet_visual) }}"
                     class=" preview-image absolute inset-0 w-full h-full object-cover rounded-2xl"
                     data-image="{{ asset('storage/' . $aboutcabinet->cabinet_visual) }}">
@@ -181,7 +200,7 @@
                     [
                         'BPI' => 'Ketua Umum',
                         'description' =>
-                            'Sebagai "kapten" dari Fordi Mapelar UB 2025 yang sedang mengudara, tentunya ketua umum bertugas untuk menavigasi dan mengarahkan haluan organisasi, mengawasi pengurus secara struktural, dan mengawasi pelaksanaan proker. Ketua umum juga bertanggung jawab untuk menjadi representasi atau "wajah" dari Fordi Mapelar UB sehingga harus mampu memberi teladan bagi pengurus dan juga anggota. 
+                            'Sebagai "kapten" dari Fordi Mapelar Universitas Brawijaya yang sedang mengudara, tentunya ketua umum bertugas untuk menavigasi dan mengarahkan haluan organisasi, mengawasi pengurus secara struktural, dan mengawasi pelaksanaan proker. Ketua umum juga bertanggung jawab untuk menjadi representasi atau "wajah" dari Fordi Mapelar UB sehingga harus mampu memberi teladan bagi pengurus dan juga anggota. 
  ',
                     ],
                     [
@@ -197,10 +216,10 @@
                     ],
                 ];
             @endphp
-            <div class="grid grid-cols-4 max-sm:grid-cols-2 max-lg:grid-cols-3  gap-2 min-h-52 ">
+            <div class="grid grid-cols-4 max-sm:grid-cols-2 max-lg:grid-cols-3  gap-3 min-h-52 ">
                 @foreach ($cards as $card)
                     <div
-                        class="p-4 rounded-2xl border-[#100C51] border flex flex-col justify-between h-full  hover:-translate-y-3 transition hover:text-white hover:bg-[#100C51]">
+                        class="p-5 rounded-2xl border-[#100C51]/30 border flex flex-col justify-between h-full transition-all duration-300 hover:-translate-y-1.5 hover:text-white hover:bg-[#100C51] hover:shadow-lg">
                         <h1 class="font-bold text-2xl leading-none max-md:text-lg mb-5">{{ $card['BPI'] }}</h1>
                         <p class="text-sm text-justify max-md:text-xs">{{ $card['description'] }}</p>
                     </div>
@@ -212,10 +231,10 @@
                 <h3>BPH</h3>
                 <h3>- Badan Pengurus Harian</h3>
             </div>
-            <div class="grid grid-cols-4 max-md:grid-cols-2 gap-2 min-h-52">
+            <div class="grid grid-cols-4 max-md:grid-cols-2 gap-3 min-h-52">
                 @foreach ($departments as $department)
                     <div
-                        class="p-4 rounded-2xl border-[#100C51] border flex flex-col justify-between h-full  hover:-translate-y-3 transition hover:text-white hover:bg-[#100C51]">
+                        class="p-5 rounded-2xl border-[#100C51]/30 border flex flex-col justify-between h-full transition-all duration-300 hover:-translate-y-1.5 hover:text-white hover:bg-[#100C51] hover:shadow-lg">
                         <h1 class="font-bold text-2xl leading-none max-md:text-lg mb-5">{{ $department->name_dept }}</h1>
                         <p class="text-sm text-justify max-md:text-xs">{{ $department->description }}</p>
                     </div>
