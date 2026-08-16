@@ -9,12 +9,12 @@
 
     <!-- Menu -->
     <ul id="nav-menu" class="hidden lg:flex font-semibold">
-      <li><a href="/" class="rounded-full font-bold lg:hover:bg-[#09182C] lg:hover:text-white px-4 py-2">Beranda</a></li>
-      <li><a href="{{ route('tentang') }}" class="rounded-full font-bold lg:hover:bg-[#09182C] lg:hover:text-white px-4 py-2">Tentang</a></li>
-      <li><a href="{{ route('berita') }}" class="rounded-full font-bold lg:hover:bg-[#09182C] lg:hover:text-white px-4 py-2">Berita</a></li>
-      <li><a href="{{ route('karya') }}" class="rounded-full font-bold lg:hover:bg-[#09182C] lg:hover:text-white px-4 py-2">Karya</a></li>
-      <li><a href="{{ route('program-kerja') }}" class="rounded-full font-bold lg:hover:bg-[#09182C] lg:hover:text-white px-4 py-2">Program Kerja</a></li>
-      <li><a href="{{ route('layanan') }}" class="rounded-full font-bold lg:hover:bg-[#09182C] lg:hover:text-white px-4 py-2 ">Layanan</a></li>
+      <li><a href="/" class="rounded-full font-bold lg:hover:bg-[#09182C] lg:hover:text-white px-4 md:py-2 py-6">Beranda</a></li>
+      <li><a href="{{ route('tentang') }}" class="rounded-full font-bold lg:hover:bg-[#09182C] lg:hover:text-white px-4  md:py-2 py-6">Tentang</a></li>
+      <li><a href="{{ route('berita') }}" class="rounded-full font-bold lg:hover:bg-[#09182C] lg:hover:text-white px-4  md:py-2 py-6">Berita</a></li>
+      <li><a href="{{ route('karya') }}" class="rounded-full font-bold lg:hover:bg-[#09182C] lg:hover:text-white px-4  md:py-2 py-6">Karya</a></li>
+      <li><a href="{{ route('program-kerja') }}" class="rounded-full font-bold lg:hover:bg-[#09182C] lg:hover:text-white px-4  md:py-2 py-6">Program Kerja</a></li>
+      <li><a href="{{ route('layanan') }}" class="rounded-full font-bold lg:hover:bg-[#09182C] lg:hover:text-white px-4  md:py-2 py-6 ">Layanan</a></li>
     </ul>
 
     <!-- Hamburger -->
@@ -40,7 +40,7 @@
       background: white;
       padding: 1.5rem;
       flex-direction: column;
-      gap: 1rem;
+      gap: 2rem;
       box-shadow: 0 10px 30px rgba(0,0,0,.1);
     }
   }

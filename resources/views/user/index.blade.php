@@ -3,7 +3,7 @@
 @section('content')
     {{-- hero section --}}
     <section
-        class="min-h-screen w-full flex items-center justify-center from-[#ECE80B] via-neutral-50/50  to-neutral-50  bg-linear-to-t relative overflow-hidden">
+        class="min-h-screen w-full flex items-center justify-center from-[#ECE80B] via-neutral-50/50  to-neutral-50 md:translate-y-0 -translate-y-20 bg-linear-to-t relative overflow-hidden">
         <div class="absolute bottom-0 w-full wafee">
             <div class="wafe" id="wafe1" style="--i:1;"></div>
             <div class="wafe" id="wafe2" style="--i:2;"></div>
@@ -19,7 +19,7 @@
         <!-- Page Content -->
         <div class="absolute z-10">
             <div data-aos="fade-up" data-aos-duration="1500"
-                class="mx-auto max-w-5xl  text-[#100C51] flex flex-col justify-center items-center">
+                class="mx-auto max-w-5xl  text-[#100C51] flex flex-col md:justify-center items-center">
                 <span class="uppercase tracking-[0.3em] text-xs font-semibold text-[#100C51]/60 mb-4">Est. 1981</span>
                 <h1 class=" text-5xl font-bold max-md:text-4xl">Fordi Mapelar</h1>
                 <p class="leading-relaxed text-center my-1  font-semibold max-md:text-sm">
@@ -156,9 +156,13 @@
             @endphp
  
             @foreach ($cards as $card)
-                <div class="w-44 h-44 perspective-[1200px]">
+                <div 
+                x-data="{ flipped: false }"
+                @click="flipped = !flipped"
+                class="w-44 h-44 perspective-distant">
                     <div
-                        class="relative w-full h-full transition-transform duration-700 transform-3d hover:transform-[rotateY(180deg)] rounded-2xl bg-white text-stone-700 font-medium border border-stone-100 shadow-sm hover:shadow-md">
+                        :class="flipped ? 'transform-[rotateY(180deg)]' : ''"
+                        class=" relative w-full h-full transition-transform duration-700 transform-3d rounded-2xl bg-white md:hover:transform-[rotateY(180deg)] text-stone-700 font-medium border border-stone-100 shadow-sm hover:shadow-md">
  
                         {{-- front --}}
                         <div
@@ -297,9 +301,9 @@
                 {{-- Dot Pagination --}}
                 <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2.5 z-10">
                     <button class="dot h-2 w-2 rounded-full bg-[#106AD2] transition-all duration-300"></button>
-                    <button class="dot h-2 w-2 rounded-full bg-stone-300 transition-all duration-300"></button>
-                    <button class="dot h-2 w-2 rounded-full bg-stone-300 transition-all duration-300"></button>
-                    <button class="dot h-2 w-2 rounded-full bg-stone-300 transition-all duration-300"></button>
+                    <button class="dot h-2 w-2 rounded-full bg-gray-300 transition-all duration-300"></button>
+                    <button class="dot h-2 w-2 rounded-full bg-gray-300 transition-all duration-300"></button>
+                    <button class="dot h-2 w-2 rounded-full bg-gray-300 transition-all duration-300"></button>
                 </div>
             </div>
         </div>

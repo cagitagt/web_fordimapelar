@@ -1,7 +1,7 @@
 @extends('layout.user')
 @section('content')
     {{-- hero --}}
-    <section class="pt-32 pb-10 bg-linear-to-b from-[#0595dd9e] h-screen via-neutral-50 to-neutral-50">
+    <section class="pt-32 pb-10 bg-linear-to-b from-[#0595dd9e] h-120 md:h-screen via-neutral-50 to-neutral-50">
         <div
             class="flex flex-col justify-center items-center min-h-72 w-full my-6 text-stone-700 px-6 md:px-20 py-16 max-md:py-10 relative">
 

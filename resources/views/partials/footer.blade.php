@@ -40,6 +40,6 @@
     </div>
     <div class="border-t border-white px-20 py-5 max-md:px-12 max-md:py-5 flex justify-between text-sm max-md:flex-col ">
         <p>Copyright &copy; 2025 UKM Fordi Mapelar</p>
-        <p>Developed with <a  href="https://www.instagram.com/caaagt/">♡</a> by Medinfo 2025</p>
+        <p>Developed with <a  href="https://www.instagram.com/caaagt/" target="_blank">♡</a> by Medinfo 2025</p>
     </div>
 </footer>

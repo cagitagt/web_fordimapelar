@@ -50,4 +50,31 @@ document.addEventListener('DOMContentLoaded', () => {
     wrapper.classList.add('transition-transform');
     update();
   });
+
+
+  // TOUCH
+  slider.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+    isDragging = true;
+    wrapper.classList.remove('transition-transform');
+  });
+
+  slider.addEventListener('touchmove', e => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const diff = e.touches[0].clientX - startX;
+    wrapper.style.transform = `translateX(calc(-${index * 100}% + ${diff}px))`;
+  }, { passive: false });
+
+  slider.addEventListener('touchend', e => {
+    if (!isDragging) return;
+    isDragging = false;
+    const diff = e.changedTouches[0].clientX - startX;
+
+    if (diff < -threshold && index < slides.length - 1) index++;
+    if (diff > threshold && index > 0) index--;
+
+    wrapper.classList.add('transition-transform');
+    update();
+  });
 });

@@ -4,7 +4,7 @@
     "src": "public/images/wafe.png"
   },
   "resources/css/app.css": {
-    "file": "assets/app-YljfPOWO.css",
+    "file": "assets/app-C8NmScZC.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "name": "app",
@@ -13,7 +13,7 @@
     ]
   },
   "resources/js/app.js": {
-    "file": "assets/app-CQI0h0FJ.js",
+    "file": "assets/app-DzThAH1b.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true
